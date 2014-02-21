@@ -3,10 +3,145 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Department Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css"  />   
+	<link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
+<style>
+.sidebar {
+	float:right;
+	margin-right: 10%;
+	background-color: #990000;
+	text-decoration: none;
+	border-bottom-right-radius: 15px;
+}
+.sidebar a {
+	text-decoration: none;
+	color: #FFF;
+	border: thin; border-color: #000;
+	display: block;
+	padding: 5px;
+}
+.sidebar a:hover {
+	color: #990000;
+	background-color: #FFF;
+}
+h1 {
+	font-family: "MS Serif", "New York", serif;
+	font-size: 36px;
+	color: #FFF;
+	background-color: #990000;
+	padding-top:8px;
+	padding-left:8px;
+	padding-bottom:5px;
+	border: thin;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+p {
+	line-height: 1.5em;
+}
+.body {
+	background-color: #666;
+}
+.content {
+	font-family: "Cagliostro", serif;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 8px;
+	padding-bottom: 5px;
+	background-color: white;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.header {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.footer {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 2%;
+	border: medium;
+	padding: 10px;
+	background-color: #999;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+
+}
+.footer a {
+	text-decoration: none;
+	color: #FFF;
+}
+.image {
+	padding-bottom: 10px;
+}
+.image img {
+	width: 100%;
+}
+.logo {
+	position: fixed;
+	width: 15%;
+}
+.headbar {
+	margin-left: 15%;
+}
+.headbar ul li {
+	display: inline-block;
+	padding: 10px;
+}
+.headbar ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+</style>
+	<div class="logo">
+    	<a href="https://www.central.edu">
+        	<img alt="Central College Logo" src="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo.png">
+        </a>
+    </div>
+    
+    <div class="headbar">
+    	<ul>
+        	<li><a href="#">Programs</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Faculty</a></li>
+        </ul>
+    </div>
+
+	<div class="image">
+		<img src="CSBanner.jpg" />
+	</div>
+
+	<div class="header">
+    	<h1>Department Name</h1>
+    </div> 
+    
 </head>
 
-<body>
-	
+<div class="body"> 
+  	<div class="sidebar">
+    	<ul>
+        	<li><a href="#">Pages</a></li>
+            <li><a href="#">Archives</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Blogroll</a></li>
+            <li><a href="#">Meta</a></li>
+        </ul>
+    </div>   
+    
+        <div class="content">
+            <p>Are you interested in becoming a computer programmer, Web designer or network administrator? You might enjoy learning more about computer science at Central College. Central offers a broad range of computer science courses. Students gain experience working with computer programming languages such as Python, Java, C++ and PHP. Computer science graduates are well prepared for immediate employment or graduate programs. Past graduates have gone on to become application developers, network administrators, systems analysts, Web programmers and software engineers.</p>
+        </div>
+        
+        <div class="footer">
+            <ul>
+                <li><a href="#">Link1</a></li>
+                <li><a href="#">Link2</a></li>
+                <li><a href="#">Link3</a></li>
+                <li><a href="#">Link4</a></li>
+            </ul>
+        </div>
+</div>
+
 </body>
 </html>
