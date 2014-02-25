@@ -53,12 +53,111 @@ table {
 /*---------------------------------------------------*/
 /* My styles */
 
+.sidebar {
+	float:right;
+	margin-right: 10%;
+	background-color: #990000;
+	text-decoration: none;
+	border-bottom-right-radius: 15px;
+}
+.sidebar a {
+	text-decoration: none;
+	color: #FFF;
+	border: 1px; border-color: #000;
+	display: block;
+	padding: 5px;
+}
+.sidebar a:hover {
+	color: #990000;
+	background-color: #FFF;
+}
 h1 {
-	background-color: #990000; /* red */
-	font-color: #FFFFFF; /* white */
-	font-family: 
+	font-family: "MS Serif", "New York", serif;
+	font-size: 36px;
+	color: #FFF;
+	background-color: #990000;
+	padding: 8px 0 5px 8px;
+	border: thin;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 }
-h2 {
-	
+p {
+	line-height: 1.5em;
 }
+.wrapper {
+	background-color: #666;
+}
+.content {
+	font-family: "Cagliostro", serif;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 8px;
+	background-color: white;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.header {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.footer {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 2%;
+	border: 1px;
+	padding: 10px;
+	background-color: #999;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+.footer a {
+	text-decoration: none;
+	color: #FFF;
+}
+.image {
+	padding-bottom: 10px;
+}
+.image img {
+	width: 100%;
+}
+.logo {
+	position: fixed;
+	width: 15%;
+}
+.headbar ul {
+	margin-left: 15%;
+	position: fixed;
+	background-color: #FFF;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	padding: 10px;
+}
+.headbar ul li:hover + ul {
+	color: #FFF;
+	background-color: #990000;
+	padding: 10px;
+	display: block;
+}
+.headbar a:hover {
+	color: #FFF;
+	background-color: #990000;
+}
+.headbar ul li {
+	padding: 0 20px;
+	border-radius: 10px;
+	list-style: none;
+	position: relative;
+	display: inline-block;
+}
+.headbar ul li ul {
+	display: block;
+}
+.headbar ul li a {
+	text-decoration: none;
+	color: black;
+}
+.headbar ul ul {
+	display: none;
+}
+
 
