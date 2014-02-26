@@ -51,8 +51,112 @@ table {
 	border-spacing: 0;
 }
 /*---------------------------------------------------*/
+/* Global */
+/*---------------------------------------------------*/
+html{
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+	font-size: 36px;
+	color: #FFF;
+	background-color: #990000;
+	padding: 8px 0 5px 8px;
+	border: thin;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+p {
+	line-height: 1.5em;
+}
+/*---------------------------------------------------*/
 /* My styles */
+/*---------------------------------------------------*/
+#header{
+	display:block;
+	background-color: #ef0;
+}
+.coverImage img{
+	width: 100%;
+	float:left;
+}
+.logo{
+	position: absolute;
+	background-color: #fff;
 
+}
+#wrapper{
+	margin: 0 auto;
+	width: 90%;
+}
+/* Navigation */
+/*---------------------------------------------------*/
+
+nav ul ul ul {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	}
+nav ul ul {
+	display: none;
+	background: #5f6975;
+	border-radius: 0px;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+	}
+nav ul ul li {
+	float: none;
+	border-top: 1px solid #6b727c;
+	border-bottom: 1px solid #575f6a;
+	position: relative;
+	}
+nav ul ul li a {
+	padding: 15px 40px;
+	color: #fff;
+	}
+nav ul ul li a:hover {
+	background: #4b545f;
+	}
+nav ul li{
+	float:left;
+	}
+nav ul li:hover {
+	background: #4b545f;
+	background: linear-gradient(top, #4b545f 0%, #5f6975 100%);
+	background: -moz-linear-gradient(top, #4b545f 0%, #5f6975 100%);
+	background: -webkit-linear-gradient(top, #4b545f 0%, #5f6975 100%);
+	}
+nav ul li:hover a {
+	color:#fff;
+	}
+nav ul li a {
+	display: block;
+	padding: 25px 40px;
+	color: #757575;
+	text-decoration: none;
+	}
+nav ul li:hover > ul {
+	display: block;
+	}
+nav ul {
+	background: #efefef;
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+	background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	padding: 0 20px;
+	border-radius: 10px;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+	}
+nav ul:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+/* Sidebar */
 .sidebar {
 	float:right;
 	margin-right: 10%;
@@ -71,22 +175,7 @@ table {
 	color: #990000;
 	background-color: #FFF;
 }
-h1 {
-	font-family: "MS Serif", "New York", serif;
-	font-size: 36px;
-	color: #FFF;
-	background-color: #990000;
-	padding: 8px 0 5px 8px;
-	border: thin;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-}
-p {
-	line-height: 1.5em;
-}
-.wrapper {
-	background-color: #666;
-}
+
 .content {
 	font-family: "Cagliostro", serif;
 	margin-left: 10%;
@@ -96,10 +185,7 @@ p {
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 }
-.header {
-	margin-left: 10%;
-	margin-right: 10%;
-}
+
 .footer {
 	margin-left: 10%;
 	margin-right: 10%;
@@ -120,44 +206,4 @@ p {
 .image img {
 	width: 100%;
 }
-.logo {
-	position: fixed;
-	width: 15%;
-}
-.headbar ul {
-	margin-left: 15%;
-	position: fixed;
-	background-color: #FFF;
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
-	padding: 10px;
-}
-.headbar ul li:hover + ul {
-	color: #FFF;
-	background-color: #990000;
-	padding: 10px;
-	display: block;
-}
-.headbar a:hover {
-	color: #FFF;
-	background-color: #990000;
-}
-.headbar ul li {
-	padding: 0 20px;
-	border-radius: 10px;
-	list-style: none;
-	position: relative;
-	display: inline-block;
-}
-.headbar ul li ul {
-	display: block;
-}
-.headbar ul li a {
-	text-decoration: none;
-	color: black;
-}
-.headbar ul ul {
-	display: none;
-}
-
 
