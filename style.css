@@ -59,10 +59,10 @@ html{
 h1 {
 	font-size: 36px;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	color: #FFF;
-	background-color: #990000;
+	color: #990000;
 	padding: 8px 0 5px 8px;
-	border: thin;
+	border-bottom: 1px dotted #990000;
+	border-top: 1px dotted #990000;
 }
 p {
 	line-height: 1.5em;
@@ -129,7 +129,7 @@ nav ul li:hover a {
 	}
 nav ul li a {
 	display: block;
-	padding: 25px 40px;
+	padding: 15px 35px;
 	color: #fff;
 	text-decoration: none;
 	}
@@ -141,7 +141,8 @@ nav ul {
 	padding: 0 20px;
 	list-style: none;
 	position: relative;
-	display: inline-table;
+	display: inline-table;	
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	}
 nav ul:after {
 	content: "";
@@ -153,29 +154,31 @@ nav ul:after {
 .sidebar {
 	width: 30%;
 	float:right;
-	background-color: #990000;
+	background-color: #fff;
 	text-decoration: none;
 }
 .sidebar a {
 	text-decoration: none;
-	color: #FFF;
-	border: 1px; border-color: #000;
+	color: #990000;
 	display: block;
-	padding: 5px;
+	padding: 10px 25px;
+	text-align:  center;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	border-bottom: 1px dotted #990000;
 }
 .sidebar a:hover {
-	color: #990000;
-	background-color: #FFF;
+	color: #fff;
+	background-color: #990000;
 }
 
 .content {
-	width: 60%;
+	width: 68%;
 	padding: 8px;
 	background-color: white;
 }
 
 .footer {
-	margin-top: 2%;
+	margin-top: 5%;
 	padding: 8px;
 	background-color: #999;
 }
@@ -188,5 +191,9 @@ nav ul:after {
 }
 .image img {
 	width: 100%;
+}
+#copyright {
+    margin-top: 25px;
+    text-align: center;
 }
 
