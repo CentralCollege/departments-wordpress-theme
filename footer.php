@@ -1,6 +1,29 @@
-	<h2>Footer</h2>
-    <p>Gavin's change</p>
-	<?php dynamic_sidebar('central_footer_widgets') ?>
+	<div class="footer">
+            <ul>
+                <li>
+                	<a href="http://facebook.com/centralcollege">
+                		<img src="//img.centralcollege.info/icons/socialIcons/large/facebook.png" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                	<a href="http://twitter.com/centralcollege">
+                    	<img src="//img.centralcollege.info/icons/socialIcons/large/twitter.png" alt="Twitter">
+                    </a>
+                </li>
+                <li>
+                	<a href="http://youtube.com/centralcollegeadm">
+                    	<img src="//img.centralcollege.info/icons/socialIcons/large/youTube.png" alt="YouTube">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <p id="copyright">
+			&copy; 2014 Computer Science at
+				<a title="Central College" href="http://www.central.edu">Central College</a>
+		</p>
+    </div>
+</div>
     <?php wp_footer(); ?>
 	</body>
 </html>
