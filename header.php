@@ -3,6 +3,7 @@
 	<head>
     	<title><?php wp_title( '-', true, 'right' ); ?> <?php bloginfo('name'); ?></title>
         <link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
     	<?php wp_head(); ?>
     </head>
     <body>
