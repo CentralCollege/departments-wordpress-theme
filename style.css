@@ -62,7 +62,6 @@ h1 {
 	color: #990000;
 	padding: 8px 0 5px 8px;
 	border-bottom: 1px dotted #990000;
-	border-top: 1px dotted #990000;
 }
 p {
 	line-height: 1.5em;
@@ -72,7 +71,7 @@ p {
 /*---------------------------------------------------*/
 #header{
 	display:block;
-	background-color: #ef0;
+	background-color: #990000;
 }
 .coverImage img{
 	width: 100%;
@@ -180,11 +179,14 @@ nav ul:after {
 .footer {
 	margin-top: 5%;
 	padding: 8px;
-	background-color: #999;
+	background-color: #efefef;
 }
 .footer a {
 	text-decoration: none;
-	color: #FFF;
+	color: #900;
+}
+.footer a:hover {
+	color: black;
 }
 .image {
 	padding-bottom: 10px;
@@ -196,4 +198,6 @@ nav ul:after {
     margin-top: 25px;
     text-align: center;
 }
-
+#copyright a {
+	text-decoration: none;
+}
