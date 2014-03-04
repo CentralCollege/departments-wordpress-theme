@@ -1,7 +1,7 @@
-<h2>Sidebar</h2>
+
 <?php 
 	$args = array(
-		'title_li'     => __('Pages')
+		'title_li'     => __(' ')
 	);
 	wp_list_pages($args); ?> 
 

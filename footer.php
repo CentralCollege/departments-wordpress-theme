@@ -1,4 +1,5 @@
-	<div class="footer">
+	<div class="clearboth"></div>
+    <div class="footer">
             <ul>
                 <li>
                 	<a href="http://facebook.com/centralcollege">
