@@ -58,7 +58,7 @@ html{
 }
 h1 {
 	font-size: 36px;
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
 	color: #990000;
 	padding: 8px 0 5px 8px;
 	border-bottom: 1px dotted #990000;
@@ -200,4 +200,7 @@ nav ul:after {
 }
 #copyright a {
 	text-decoration: none;
+}
+.clearboth {
+	clear: both;
 }

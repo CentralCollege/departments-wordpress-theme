@@ -1,7 +1,7 @@
 
 <?php 
 	$args = array(
-		'title_li'     => __(' ')
+		'title_li'     => __('')
 	);
 	wp_list_pages($args); ?> 
 

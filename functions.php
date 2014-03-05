@@ -67,4 +67,23 @@
 	// Only keep the last 5 revisions of any page.
 	// ----------------------------------------------------------------
 	//define( 'WP_POST_REVISIONS', 5);
+	
+	// ----------------------------------------------------------------
+	// Gives option for custom background picture
+	// ----------------------------------------------------------------
+	$defaults = array(
+		'default-image'          => '',
+		'random-default'         => false,
+		'width'                  => 0,
+		'height'                 => 0,
+		'flex-height'            => false,
+		'flex-width'             => false,
+		'default-text-color'     => '',
+		'header-text'            => true,
+		'uploads'                => true,
+		'wp-head-callback'       => '',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => '',
+	);
+	add_theme_support( 'custom-header', $defaults );
 ?>
