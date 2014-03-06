@@ -55,8 +55,13 @@ table {
 Fonts loaded from this server
 ---------------------------------------------------
 */
-@font-face {font-family: 'ZurichBT-RomanCondensed';src: url('//departments.central.edu/fonts/ZurichCondensed.eot');src: url('//departments.central.edu/fonts/ZurichCondensed.eot?#iefix') format('embedded-opentype'),url('//departments.central.edu/fonts/ZurichCondensed.woff') format('woff'),url('//departments.central.edu/fonts/ZurichCondensed.ttf') format('truetype');
-}
+@font-face {
+	font-family: 'ZurichBT-RomanCondensed';
+	src: url('/fonts/ZurichCondensed.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/ZurichCondensed.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('/fonts/ZurichCondensed.woff') format('woff'), /* Modern Browsers */
+	     url('/fonts/ZurichCondensed.ttf')  format('truetype') /* Safari, Android, iOS */
+	}
 
 /*---------------------------------------------------*/
 /* Global */
