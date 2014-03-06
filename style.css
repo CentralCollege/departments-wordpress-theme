@@ -50,6 +50,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/*
+---------------------------------------------------
+Fonts loaded from this server
+---------------------------------------------------
+*/
+@font-face {font-family: 'ZurichBT-RomanCondensed';src: url('//departments.central.edu/fonts/ZurichCondensed.eot');src: url('//departments.central.edu/fonts/ZurichCondensed.eot?#iefix') format('embedded-opentype'),url('//departments.central.edu/fonts/ZurichCondensed.woff') format('woff'),url('//departments.central.edu/fonts/ZurichCondensed.ttf') format('truetype');
+}
+
 /*---------------------------------------------------*/
 /* Global */
 /*---------------------------------------------------*/

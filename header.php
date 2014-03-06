@@ -12,7 +12,11 @@
         </div>
         <div class="logo">
             <img alt="Central College Logo" src="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo.png">
-        </div>    
+            <h1><?php bloginfo('name'); ?></h1>   
+        </div>
+        
+         
+        
         <div id="wrapper">
             <div id="header">
                 <div class="headbar">
