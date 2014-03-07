@@ -72,18 +72,18 @@
 	// Gives option for custom background picture
 	// ----------------------------------------------------------------
 	$defaults = array(
-		'default-image'          => '',
-		'random-default'         => false,
-		'width'                  => 0,
-		'height'                 => 0,
-		'flex-height'            => false,
-		'flex-width'             => false,
-		'default-text-color'     => '',
-		'header-text'            => true,
-		'uploads'                => true,
-		'wp-head-callback'       => '',
-		'admin-head-callback'    => '',
-		'admin-preview-callback' => '',
+		'default-image'          => get_template_directory_uri() . '/images/header.jpg',
+		'width'                  => 1024,
+		'height'                 => 300,
+		'flex-height'            => true,
+		'flex-width'             => true,
 	);
 	add_theme_support( 'custom-header', $defaults );
+	
+	function add_ie_html5_shim () {
+    echo '<!--[if lt IE 9]>';
+    echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
+    echo '<![endif]-->';
+	}
+	add_action('wp_head', 'add_ie_html5_shim');
 ?>
