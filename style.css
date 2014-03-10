@@ -69,7 +69,7 @@ Fonts loaded from this server
 html{
 	font-family: Arial, Helvetica, sans-serif;
 }
-h1 {
+.header h1 {
 	font-size: 36px;
 	font-family: 'ZurichBT-RomanCondensed',arial,serif;
 	color: #990000;
@@ -98,6 +98,13 @@ p {
 	background-color: #fff;
 	position: absolute;
 	padding: .5em;
+}
+.logoGroup h1 {
+	font-size: 20px;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+	letter-spacing: 1px;
+	color: #707173;
+	text-transform: uppercase;
 }
 #wrapper{
 	margin: 0 auto;
