@@ -58,7 +58,7 @@
 		));
 	}
 	add_action('widgets_init', 'central_department_widgets');
-		// ----------------------------------------------------------------
+	// ----------------------------------------------------------------
 	// Add the capability for editors to edit theme options
 	// ----------------------------------------------------------------
 	$role = get_role('editor');
@@ -81,9 +81,13 @@
 	add_theme_support( 'custom-header', $defaults );
 	
 	function add_ie_html5_shim () {
-    echo '<!--[if lt IE 9]>';
-    echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
-    echo '<![endif]-->';
+		echo '<!--[if lt IE 9]>';
+		echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
+		echo '<![endif]-->';
 	}
 	add_action('wp_head', 'add_ie_html5_shim');
+	
+	// ----------------------------------------------------------------
+	// Add menu functionality to template
+	// ----------------------------------------------------------------
 ?>
