@@ -113,12 +113,12 @@ p {
 /* Navigation */
 /*---------------------------------------------------*/
 
-nav ul ul ul {
+.menu-main-menu-container ul ul ul {
 	position: absolute;
 	left: 100%;
 	top: 0;
 	}
-nav ul ul {
+.menu-main-menu-container ul ul {
 	display: none;
 	background: #990000;
 	border-radius: 0px;
@@ -126,40 +126,40 @@ nav ul ul {
 	position: absolute;
 	top: 100%;
 	}
-nav ul ul li {
+.menu-main-menu-container ul ul li {
 	float: none;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 	position: relative;
 	}
-nav ul ul li a {
+.menu-main-menu-container ul ul li a {
 	padding: 15px 40px;
 	color: #fff;
 	}
-nav ul ul li a:hover {
+.menu-main-menu-container ul ul li a:hover {
 	background: #990000;
 	color: #FFF;
 	}
-nav ul li{
+.menu-main-menu-container ul li{
 	float:left;
 	}
-nav ul li:hover {
+.menu-main-menu-container ul li:hover {
 	
 	}
-nav ul li:hover a {
+.menu-main-menu-container ul li:hover a {
 	color:#990000;
 	background: #fff;
 	}
-nav ul li a {
+.menu-main-menu-container ul li a {
 	display: block;
 	padding: 15px 35px;
 	color: #fff;
 	text-decoration: none;
 	}
-nav ul li:hover > ul {
+.menu-main-menu-container ul li:hover > ul {
 	display: block;
 	}
-nav ul {
+.menu-main-menu-container ul {
 	background: #990000;
 	padding: 0 20px;
 	list-style: none;
@@ -167,7 +167,7 @@ nav ul {
 	display: inline-table;	
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	}
-nav ul:after {
+.menu-main-menu-container ul:after {
 	content: "";
 	clear: both;
 	display: block;

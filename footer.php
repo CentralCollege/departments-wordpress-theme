@@ -20,7 +20,7 @@
         </div>
         
         <p id="copyright">
-			&copy; 2014 Computer Science at
+			&copy; <?php echo date("Y"); ?> Computer Science at
 				<a title="Central College" href="http://www.central.edu">Central College</a>
 		</p>
     </div>

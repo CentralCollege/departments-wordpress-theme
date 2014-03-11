@@ -18,20 +18,10 @@
         <div id="wrapper">
             <div id="header">
                 <div class="headbar">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Programs</a>
-                                <ul>
-                                    <li><a href="#">Computer Science Major</a></li>
-                                    <li><a href="#">Computer Science Minor</a></li>
-                                    <li><a href="#">Computer Information Systems Major</a></li>
-                                    <li><a href="#">Computational Science Minor</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Courses</a></li>
-                            <li><a href="#">Faculty</a></li>
-                        </ul>
-                    </nav>
+                	 <?php
+						if ( has_nav_menu( 'header-menu' ) ) {
+                    		wp_nav_menu( array( 'menu' => 'header-menu', 'menu_class' => 'menu', ) ); 
+						} ?>
                 </div>
             </div>
     
