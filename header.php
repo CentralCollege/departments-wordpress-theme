@@ -20,11 +20,11 @@
                 <div class="headbar">
                 	 <?php
 						if ( has_nav_menu( 'header-menu' ) ) {
-                    		wp_nav_menu( array( 'menu' => 'header-menu', 'menu_class' => 'menu', ) ); 
+                    		wp_nav_menu( array( 'menu' => 'header-menu', 'menu_class' => 'menu', 'header-text' => true,) ); 
 						} ?>
                 </div>
             </div>
     
         <div class="header">
-            <h1>Department Name</h1>
+            <?php the_title( '<h1>', '</h1>' ); ?>
         </div> 

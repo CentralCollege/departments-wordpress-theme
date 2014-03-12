@@ -113,12 +113,12 @@ p {
 /* Navigation */
 /*---------------------------------------------------*/
 
-.menu-main-menu-container ul ul ul {
+.menu-menu-1-container ul ul ul {
 	position: absolute;
 	left: 100%;
 	top: 0;
 	}
-.menu-main-menu-container ul ul {
+.menu-menu-1-container ul ul {
 	display: none;
 	background: #990000;
 	border-radius: 0px;
@@ -126,40 +126,40 @@ p {
 	position: absolute;
 	top: 100%;
 	}
-.menu-main-menu-container ul ul li {
+.menu-menu-1-container ul ul li {
 	float: none;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 	position: relative;
 	}
-.menu-main-menu-container ul ul li a {
+.menu-menu-1-container ul ul li a {
 	padding: 15px 40px;
 	color: #fff;
 	}
-.menu-main-menu-container ul ul li a:hover {
+.menu-menu-1-container ul ul li a:hover {
 	background: #990000;
 	color: #FFF;
 	}
-.menu-main-menu-container ul li{
+.menu-menu-1-container ul li{
 	float:left;
 	}
-.menu-main-menu-container ul li:hover {
+.menu-menu-1-container ul li:hover {
 	
 	}
-.menu-main-menu-container ul li:hover a {
+.menu-menu-1-container ul li:hover a {
 	color:#990000;
 	background: #fff;
 	}
-.menu-main-menu-container ul li a {
+.menu-menu-1-container ul li a {
 	display: block;
 	padding: 15px 35px;
 	color: #fff;
 	text-decoration: none;
 	}
-.menu-main-menu-container ul li:hover > ul {
+.menu-menu-1-container ul li:hover > ul {
 	display: block;
 	}
-.menu-main-menu-container ul {
+.menu-menu-1-container ul {
 	background: #990000;
 	padding: 0 20px;
 	list-style: none;
@@ -167,7 +167,7 @@ p {
 	display: inline-table;	
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	}
-.menu-main-menu-container ul:after {
+.menu-menu-1-container ul:after {
 	content: "";
 	clear: both;
 	display: block;
