@@ -77,6 +77,7 @@
 		'height'                 => 300,
 		'flex-height'            => true,
 		'flex-width'             => true,
+		'header-text'			 => false,
 	);
 	add_theme_support( 'custom-header', $defaults );
 	

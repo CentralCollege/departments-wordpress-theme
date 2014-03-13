@@ -76,6 +76,11 @@ html{
 	padding: 8px 0 5px 8px;
 	border-bottom: 1px dotted #990000;
 }
+h2 {
+	font-size: 24px;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+	color: #990000;
+}
 p {
 	line-height: 1.5em;
 }
@@ -113,12 +118,12 @@ p {
 /* Navigation */
 /*---------------------------------------------------*/
 
-.menu-menu-1-container ul ul ul {
+.menu ul ul {
 	position: absolute;
 	left: 100%;
 	top: 0;
 	}
-.menu-menu-1-container ul ul {
+.menu ul {
 	display: none;
 	background: #990000;
 	border-radius: 0px;
@@ -126,40 +131,40 @@ p {
 	position: absolute;
 	top: 100%;
 	}
-.menu-menu-1-container ul ul li {
+.menu ul li {
 	float: none;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
 	position: relative;
+	background-color: #efefef;
 	}
-.menu-menu-1-container ul ul li a {
+.menu ul li a {
 	padding: 15px 40px;
 	color: #fff;
+	background-color: #efefef;
 	}
-.menu-menu-1-container ul ul li a:hover {
+.menu ul li a:hover {
 	background: #990000;
-	color: #FFF;
+	color: #fff;
 	}
-.menu-menu-1-container ul li{
+.menu li{
 	float:left;
 	}
-.menu-menu-1-container ul li:hover {
+.menu li:hover {
 	
 	}
-.menu-menu-1-container ul li:hover a {
+.menu li:hover a {
 	color:#990000;
-	background: #fff;
+	background: #ccc;
 	}
-.menu-menu-1-container ul li a {
+.menu li a {
 	display: block;
 	padding: 15px 35px;
-	color: #fff;
+	color: #efefef;
 	text-decoration: none;
 	}
-.menu-menu-1-container ul li:hover > ul {
+.menu li:hover > ul {
 	display: block;
 	}
-.menu-menu-1-container ul {
+.menu {
 	background: #990000;
 	padding: 0 20px;
 	list-style: none;
@@ -167,7 +172,7 @@ p {
 	display: inline-table;	
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	}
-.menu-menu-1-container ul:after {
+.menu:after {
 	content: "";
 	clear: both;
 	display: block;

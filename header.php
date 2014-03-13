@@ -20,11 +20,7 @@
                 <div class="headbar">
                 	 <?php
 						if ( has_nav_menu( 'header-menu' ) ) {
-                    		wp_nav_menu( array( 'menu' => 'header-menu', 'menu_class' => 'menu', 'header-text' => true,) ); 
+                    		wp_nav_menu( array( 'menu' => 'header-menu', 'menu_class' => 'menu',) ); 
 						} ?>
                 </div>
             </div>
-    
-        <div class="header">
-            <?php the_title( '<h1>', '</h1>' ); ?>
-        </div> 
