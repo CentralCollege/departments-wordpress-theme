@@ -233,3 +233,15 @@ p {
 .clearboth {
 	clear: both;
 }
+.post-entry {
+	border-bottom: 1px solid #000;
+	padding: 10px;
+}
+.post-entry a {
+	float: right;
+}
+.posts {
+	width: 65%;
+	float: left;
+}
+	
