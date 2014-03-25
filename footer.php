@@ -5,13 +5,9 @@
                 	<a href="http://facebook.com/centralcollege">
                 		<img src="//img.centralcollege.info/icons/socialIcons/large/facebook.png" alt="Facebook">
                     </a>
-                </li>
-                <li>
                 	<a href="http://twitter.com/centralcollege">
                     	<img src="//img.centralcollege.info/icons/socialIcons/large/twitter.png" alt="Twitter">
                     </a>
-                </li>
-                <li>
                 	<a href="http://youtube.com/centralcollegeadm">
                     	<img src="//img.centralcollege.info/icons/socialIcons/large/youTube.png" alt="YouTube">
                     </a>
@@ -20,7 +16,7 @@
         </div>
         
         <p id="copyright">
-			&copy; 2014 Computer Science at
+			&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?> at
 				<a title="Central College" href="http://www.central.edu">Central College</a>
 		</p>
     </div>
