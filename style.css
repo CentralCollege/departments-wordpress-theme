@@ -211,15 +211,7 @@ p {
 	background-color: #efefef;
 	text-align: center;
 }
-.footer a {
-	text-decoration: none;
-	color: #900;
-	display: inline;
-	padding: 5px;
-}
-.footer a:hover {
-	color: black;
-}
+
 .image {
 	padding-bottom: 10px;
 }
@@ -250,3 +242,39 @@ p {
 	float: left;
 }
 	
+a.icon-facebook {
+  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+  background-position: 0px 0px;
+  width: 35px;
+  height: 35px;
+}
+a.icon-facebook:hover {
+  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+  background-position: 0px -35px;
+  width: 35px;
+  height: 35px;
+}
+a.icon-twitter {
+  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+  background-position: 0px -70px;
+  width: 35px;
+  height: 35px;
+}
+a.icon-twitter:hover {
+  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+  background-position: 0px -105px;
+  width: 35px;
+  height: 35px;
+}
+a.icon-youtube {
+  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+  background-position: 0px -140px;
+  width: 35px;
+  height: 35px;
+}
+a.icon-youtube:hover {
+  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+  background-position: 0px -175px;
+  width: 35px;
+  height: 35px;
+}

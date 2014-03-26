@@ -1,18 +1,8 @@
 	<div class="clearboth"></div>
-    <div class="footer">
-            <ul>
-                <li>
-                	<a href="http://facebook.com/centralcollege">
-                		<img src="//img.centralcollege.info/icons/socialIcons/large/facebook.png" alt="Facebook">
-                    </a>
-                	<a href="http://twitter.com/centralcollege">
-                    	<img src="//img.centralcollege.info/icons/socialIcons/large/twitter.png" alt="Twitter">
-                    </a>
-                	<a href="http://youtube.com/centralcollegeadm">
-                    	<img src="//img.centralcollege.info/icons/socialIcons/large/youTube.png" alt="YouTube">
-                    </a>
-                </li>
-            </ul>
+    	<div class="footer">
+            <a href="http://facebook.com/centralcollege" class="icon-facebook"> </a>
+			<a href="http://twitter.com/centralcollege" class="icon-twitter"> </a>
+			<a href="http://youtube.com/centralcollegeadm" class="icon-youtube"> </a>
         </div>
         
         <p id="copyright">
