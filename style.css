@@ -233,6 +233,10 @@ p {
 	padding: 10px;
 }
 .post-entry a {
+	text-decoration: none;
+	color: #990000;
+}
+a.read-more {
 	float: right;
 	text-decoration: none;
 	color: #990000;
@@ -242,39 +246,45 @@ p {
 	float: left;
 }
 	
-a.icon-facebook {
-  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+.icon-facebook {
+  background-image: url("images/sprite.png");
   background-position: 0px 0px;
   width: 35px;
   height: 35px;
+  display: inline-block
 }
-a.icon-facebook:hover {
-  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+.icon-facebook:hover {
+  background-image: url("images/sprite.png");
   background-position: 0px -35px;
   width: 35px;
   height: 35px;
+  display: inline-block
 }
-a.icon-twitter {
-  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+.icon-twitter {
+  background-image: url("images/sprite.png");
   background-position: 0px -70px;
   width: 35px;
   height: 35px;
+  display: inline-block
 }
-a.icon-twitter:hover {
-  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+.icon-twitter:hover {
+  background-image: url("images/sprite.png");
   background-position: 0px -105px;
   width: 35px;
   height: 35px;
+  display: inline-block
 }
-a.icon-youtube {
-  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+.icon-youtube {
+  background-image: url("images/sprite.png");
   background-position: 0px -140px;
   width: 35px;
   height: 35px;
+  display: inline-block
 }
-a.icon-youtube:hover {
-  background-image: url(//img.centralcollege.info/departments/social-sprite.png);
+.icon-youtube:hover {
+  background-image: url("images/sprite.png");
   background-position: 0px -175px;
   width: 35px;
   height: 35px;
+  display: inline-block
 }
