@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
     	<?php wp_head(); ?>
     </head>
-    <body>
+    <body> 
         <div class="coverImage">
             <img src="<?php header_image(); ?>" />
         </div>
@@ -14,7 +14,7 @@
         <div class="logoGroup">	
                 <div class="logo"><a href="http://www.central.edu/"><img alt="Central College Logo" src="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo.png"></a></div>
                 <h1><?php bloginfo('name'); ?></h1>   
-        </div>
+        </div> 
         <div id="wrapper">
             <div id="header">
                 <div class="headbar">
