@@ -85,39 +85,17 @@ p {
 line-height: 1.5em;
 }
 body {
-	background-image: url(images/graystripes.png);
+	background-image: url(images/graystripes2.png);
 }
 /*---------------------------------------------------*/
 /* My styles */
 /*---------------------------------------------------*/
-#header{
-display:block;
-background-color: #990000;
-}
-.coverImage img{
-width: 100%;
-float:left;
-}
-.logo{
 
-}
-.logoGroup{
-text-align: center;
-background-color: #fff;
-position: absolute;
-padding: .5em;
-}
-.logoGroup h1 {
-font-size: 20px;
-font-family: 'ZurichBT-RomanCondensed',arial,serif;
-letter-spacing: 1px;
-color: #707173;
-text-transform: uppercase;
-}
 #wrapper{
 margin: 0 auto;
 width: 90%;
 background-color: #fff;
+box-shadow: 0 0 10px #000000;
 }
 /* Navigation */
 /*---------------------------------------------------*/
@@ -152,11 +130,8 @@ color: #fff;
 .menu li{
 float:left;
 }
-.menu li:hover {
-
-}
 .menu li:hover a {
-color:#990000;
+color:#fff;
 background: #ccc;
 }
 .menu li a {
@@ -183,6 +158,7 @@ display: block;
 }
 
 /* Sidebar */
+/*---------------------------------------------------*/
 .pagenav {
 width: 30%;
 float:right;
@@ -203,34 +179,43 @@ color: #fff;
 background-color: #990000;
 }
 
-.content {
-width: 68%;
-padding: 8px;
-background-color: white;
-}
+/* Header */
+/*---------------------------------------------------*/
 
-.footer {
-margin-top: 5%;
-padding: 8px;
-background-color: #efefef;
+#header{
+display:block;
+background-color: #990000;
+}
+.coverImage img{
+width: 100%;
+float:left;
+}
+.logoGroup{
 text-align: center;
+background-color: #fff;
+position: absolute;
+padding: .5em;
 }
-
+.logoGroup h1 {
+font-size: 20px;
+font-family: 'ZurichBT-RomanCondensed',arial,serif;
+letter-spacing: 1px;
+color: #707173;
+text-transform: uppercase;
+}
 .image {
 padding-bottom: 10px;
 }
 .image img {
 width: 100%;
 }
-#copyright {
-    margin-top: 25px;
-    text-align: center;
-}
-#copyright a {
-text-decoration: none;
-}
-.clearboth {
-clear: both;
+
+/* Content */
+/*---------------------------------------------------*/
+.content {
+width: 68%;
+padding: 8px;
+background-color: white;
 }
 .post-entry {
 border-bottom: 1px solid #000;
@@ -250,6 +235,25 @@ width: 65%;
 float: left;
 }
 
+/* Footer */
+/*---------------------------------------------------*/
+
+.footer {
+margin-top: 5%;
+padding: 8px;
+background-color: #efefef;
+text-align: center;
+}
+#copyright {
+    margin-top: 25px;
+    text-align: center;
+}
+#copyright a {
+text-decoration: none;
+}
+.clearboth {
+clear: both;
+}
 .icon-facebook {
   background-image: url("images/sprite.png");
   background-position: 0px 0px;
