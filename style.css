@@ -234,6 +234,22 @@ color: #990000;
 width: 65%;
 float: left;
 }
+.post-content {
+	padding: 10px;
+}
+.post-content p {
+	padding: 10px;
+}
+.post-content h2 {
+	color: #990000;
+    font-family: 'ZurichBT-RomanCondensed',arial,serif;
+    font-size: 24px;
+	padding-bottom: 1em;
+}
+.post-content a {
+	text-decoration: none;
+	color: #990000;
+}
 
 /* Footer */
 /*---------------------------------------------------*/
