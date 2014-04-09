@@ -82,7 +82,7 @@ font-family: 'ZurichBT-RomanCondensed',arial,serif;
 color: #990000;
 }
 p {
-line-height: 1.5em;
+line-height: 1.25em;
 }
 body {
 	background-image: url(images/graystripes2.png);
@@ -213,42 +213,68 @@ width: 100%;
 /* Content */
 /*---------------------------------------------------*/
 .content {
-width: 68%;
-padding: 8px;
-background-color: white;
+	width: 68%;
+	padding: 8px;
+	background-color: white;
 }
 .post-entry {
-border-bottom: 1px solid #000;
-padding: 10px;
+	border-bottom: 1px solid #000;
+	padding: 1%;
 }
 .post-entry a {
-text-decoration: none;
-color: #990000;
+	text-decoration: none;
+	color: #990000;
+}
+.post-entry h2 {
+	padding-bottom: .5em;
 }
 a.read-more {
-float: right;
-text-decoration: none;
-color: #990000;
+	float: right;
+	text-decoration: none;
+	color: #990000;
 }
 .posts {
-width: 65%;
-float: left;
+	width: 65%;
+	float: left;
 }
 .post-content {
-	padding: 10px;
+	padding: 1%;
 }
 .post-content p {
-	padding: 10px;
+	margin: 2% 0;
 }
 .post-content h2 {
 	color: #990000;
     font-family: 'ZurichBT-RomanCondensed',arial,serif;
-    font-size: 24px;
-	padding-bottom: 1em;
+    font-size: 3em;
+	padding-bottom: .5em;
 }
 .post-content a {
 	text-decoration: none;
 	color: #990000;
+}
+.post-content h3 {
+	color: #990000;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+	font-size: 2em;
+	margin: 2% 0;
+}
+.wp-caption {
+	font-size: .8em;
+	margin: 1%;
+}
+.alignright {
+	float: right;
+	margin: 1% 0 1% 1%;
+}
+.alignleft {
+	float: left;
+	margin: 1% 1% 1% 0;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
 
 /* Footer */
