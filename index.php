@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<?php get_search_form(); ?> 
+<div class="clearboth"></div>
 <?php get_sidebar(); ?>
 
 	<div class="posts">

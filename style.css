@@ -178,6 +178,10 @@ border-bottom: 1px dotted #990000;
 color: #fff;
 background-color: #990000;
 }
+.searchform {
+	text-align: right;
+	padding: .5em;
+}
 
 /* Header */
 /*---------------------------------------------------*/
@@ -257,6 +261,15 @@ a.read-more {
 	color: #990000;
 	font-family: 'ZurichBT-RomanCondensed',arial,serif;
 	font-size: 2em;
+	margin: 2% 0;
+}
+.post-content h4 {
+	color: #990000;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+	font-size: 1.5em;
+	margin: 2% 0;
+}
+.post-content li {
 	margin: 2% 0;
 }
 .wp-caption {
