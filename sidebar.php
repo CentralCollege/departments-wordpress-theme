@@ -1,4 +1,5 @@
 <ul class="pagenav">
+<?php get_search_form(); ?> 
 <?php 
 	$args = array(
 		'title_li'     => __('')
