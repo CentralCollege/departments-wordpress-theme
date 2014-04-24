@@ -107,8 +107,14 @@
 	//HTML for the menu goes here
 	function central_social_media(){
 		//Save data on form submit
-			if (isset($_POST['central_twitter_URL'])){
+			if (isset($_POST['central_twitter_URL']) && strlen($_POST['central_twitter_URL']) > 0){
 				update_option('central_twitter_URL', $_POST['central_twitter_URL']);
+			}
+			if (isset($_POST['central_facebook_URL']) && strlen($_POST['central_facebook_URL']) > 0){
+				update_option('central_facebook_URL', $_POST['central_facebook_URL']);
+			}
+			if (isset($_POST['central_youtube']) && strlen($_POST['central_youtube_URL']) > 0){
+				update_option('central_youtube_URL', $_POST['central_youtube_URL']);
 			}?>
 
 	    <div class="wrap">
@@ -123,7 +129,25 @@
                             </th>
                             <td>
                                 <input type="text" name="central_twitter_URL" id="central_twitter_URL" value="" size="50" /><br />
-                                <span class="description">Enter the URL to your twitter account. <?php echo get_option('central_twitter_url');?></span>
+                                <span class="description">Enter the URL to your Twitter account. <?php echo get_option('central_twitter_url');?></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th align="right">
+                                <label for="central_facebook_URL">Facebook Account:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="central_facebook_URL" id="central_facebook_URL" value="" size="50" /><br />
+                                <span class="description">Enter the URL to your Facebook account. <?php echo get_option('central_facebook_url');?></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th align="right">
+                                <label for="central_youtube_URL">YouTube Account:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="central_youtube_URL" id="central_youtube_URL" value="" size="50" /><br />
+                                <span class="description">Enter the URL to your YouTube account. <?php echo get_option('central_youtube_url');?></span>
                             </td>
                         </tr>
                         <!--- Need to add Facebook and youTube !--->
