@@ -91,9 +91,49 @@
 	// ----------------------------------------------------------------
 	// Add menu functionality to template
 	// ----------------------------------------------------------------
-	
 	function register_my_menu() {
 	  register_nav_menu('header-menu',__( 'Header Menu' ));
 	}
 	add_action( 'init', 'register_my_menu' );
+	
+	// ----------------------------------------------------------------
+	// Add menu for managing social media outlets
+	// ----------------------------------------------------------------
+	function central_theme_menu(){
+		add_menu_page('Social Media', 'Social Media', 'edit_pages', 'central-social-media', 'central_social_media', '//img.centralcollege.info/icons/balloon.png', 99);
+	}
+	add_action('admin_menu', 'central_theme_menu');
+	
+	//HTML for the menu goes here
+	function central_social_media(){
+		//Save data on form submit
+			if (isset($_POST['central_twitter_URL'])){
+				update_option('central_twitter_URL', $_POST['central_twitter_URL']);
+			}?>
+
+	    <div class="wrap">
+			<h2>Social Media Settings</h2>
+            <p>Enter the URL to the following social media sites if applicable.</p>
+            <form name="form1" method="post" action="">
+            	<table class="form-table">
+                    <tbody>
+                        <tr>
+                            <th align="right">
+                                <label for="central_twitter_URL">Twitter Account:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="central_twitter_URL" id="central_twitter_URL" value="" size="50" /><br />
+                                <span class="description">Enter the URL to your twitter account. <?php echo get_option('central_twitter_url');?></span>
+                            </td>
+                        </tr>
+                        <!--- Need to add Facebook and youTube !--->
+                        <tr>
+                            <td colspan="2"><input id="submit" class="button button-primary" type="submit" value="Update settings" name="submit"></td>
+                        </tr> 
+                    </tbody>
+                </table>
+			</form>
+		</div>
+	<?php
+	}
 ?>
