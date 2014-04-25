@@ -109,12 +109,18 @@
 		//Save data on form submit
 			if (isset($_POST['central_twitter_URL']) && strlen($_POST['central_twitter_URL']) > 0){
 				update_option('central_twitter_URL', $_POST['central_twitter_URL']);
+			} else {
+				update_option('central_twitter_URL','http://twitter.com/centralcollege'); 
 			}
 			if (isset($_POST['central_facebook_URL']) && strlen($_POST['central_facebook_URL']) > 0){
 				update_option('central_facebook_URL', $_POST['central_facebook_URL']);
+			} else {
+				update_option('central_facebook_URL','http://facebook.com/centralcollege');
 			}
-			if (isset($_POST['central_youtube']) && strlen($_POST['central_youtube_URL']) > 0){
+			if (isset($_POST['central_youtube_URL']) && strlen($_POST['central_youtube_URL']) > 0){
 				update_option('central_youtube_URL', $_POST['central_youtube_URL']);
+			} else {
+				update_option('central_youtube_URL','http://www.youtube.com/user/centralcollegeadm');
 			}?>
 
 	    <div class="wrap">
@@ -128,7 +134,7 @@
                                 <label for="central_twitter_URL">Twitter Account:</label>
                             </th>
                             <td>
-                                <input type="text" name="central_twitter_URL" id="central_twitter_URL" value="" size="50" /><br />
+                                <input type="text" name="central_twitter_URL" id="central_twitter_URL" value="<?php echo get_option('central_twitter_url');?>" size="50" /><br />
                                 <span class="description">Enter the URL to your Twitter account. <?php echo get_option('central_twitter_url');?></span>
                             </td>
                         </tr>
@@ -137,7 +143,7 @@
                                 <label for="central_facebook_URL">Facebook Account:</label>
                             </th>
                             <td>
-                                <input type="text" name="central_facebook_URL" id="central_facebook_URL" value="" size="50" /><br />
+                                <input type="text" name="central_facebook_URL" id="central_facebook_URL" value="<?php echo get_option('central_facebook_url');?>" size="50" /><br />
                                 <span class="description">Enter the URL to your Facebook account. <?php echo get_option('central_facebook_url');?></span>
                             </td>
                         </tr>
@@ -146,7 +152,7 @@
                                 <label for="central_youtube_URL">YouTube Account:</label>
                             </th>
                             <td>
-                                <input type="text" name="central_youtube_URL" id="central_youtube_URL" value="" size="50" /><br />
+                                <input type="text" name="central_youtube_URL" id="central_youtube_URL" value="<?php echo get_option('central_youtube_url');?>" size="50" /><br />
                                 <span class="description">Enter the URL to your YouTube account. <?php echo get_option('central_youtube_url');?></span>
                             </td>
                         </tr>

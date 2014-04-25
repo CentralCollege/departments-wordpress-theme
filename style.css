@@ -64,6 +64,14 @@ url('/fonts/ZurichCondensed.ttf') format('truetype') /* Safari, Android, iOS */
 }
 
 /*---------------------------------------------------*/
+/* Responsive */
+/*---------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+	
+}
+
+/*---------------------------------------------------*/
 /* Global */
 /*---------------------------------------------------*/
 html{
@@ -286,6 +294,7 @@ a.read-more {
 }
 #copyright a {
 	text-decoration: none;
+	color: #000;
 }
 .clearboth {
 	clear: both;
