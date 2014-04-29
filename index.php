@@ -15,6 +15,8 @@
     <a href="<?php the_permalink() ?>" class="read-more">Read more</a>
     <div class="clearboth"></div>
     </div>
+    
+    <?php get_sidebar(); ?>
 
 	<?php 
     //Loop ends here

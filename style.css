@@ -64,14 +64,6 @@ url('/fonts/ZurichCondensed.ttf') format('truetype') /* Safari, Android, iOS */
 }
 
 /*---------------------------------------------------*/
-/* Responsive */
-/*---------------------------------------------------*/
-
-@media screen and (max-width: 480px) {
-	
-}
-
-/*---------------------------------------------------*/
 /* Global */
 /*---------------------------------------------------*/
 html{
@@ -340,4 +332,23 @@ a.read-more {
   width: 35px;
   height: 35px;
   display: inline-block
+}
+
+/*---------------------------------------------------*/
+/* Responsive */
+/*---------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+	.logoGroup{
+		position: inherit;
+		width: 100%;
+	}
+	.menu{
+		display: none;
+	}
+	.pagenav {
+		width: 100%;
+	}
+	.posts {
+		width: 100%;
+	}
 }
