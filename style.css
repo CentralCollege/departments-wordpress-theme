@@ -133,7 +133,7 @@ body {
 	background: #990000;
 	list-style: none;
 	position: relative;
-	display: inline-table;	
+	display: inline-block;	
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 .menu:after {
@@ -350,5 +350,11 @@ a.read-more {
 	}
 	.posts {
 		width: 100%;
+	}
+	.post-content img {
+		width: 100%;
+	}
+	#wrapper {
+		box-shadow: 0px 20px 10px;
 	}
 }

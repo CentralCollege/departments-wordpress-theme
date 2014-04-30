@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <div class="clearboth"></div>
-<?php get_sidebar(); ?>
 
 	<div class="posts">
 	<?php
@@ -16,7 +15,6 @@
     <div class="clearboth"></div>
     </div>
     
-    <?php get_sidebar(); ?>
 
 	<?php 
     //Loop ends here
@@ -24,5 +22,7 @@
     <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
     <?php endif; ?>
     </div>
+    
+    <?php get_sidebar(); ?>
 	
 <?php get_footer(); ?>

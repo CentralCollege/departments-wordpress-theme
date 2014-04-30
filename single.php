@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php get_sidebar(); ?>
 
 	<div class="posts">
 	<?php
@@ -21,5 +20,7 @@
     <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
     <?php endif; ?>
     </div>
+    
+    <?php get_sidebar(); ?>
 	
 <?php get_footer(); ?>
