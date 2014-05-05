@@ -357,8 +357,12 @@ a.read-more {
 	}
 	#wrapper {
 		box-shadow: 0px 20px 10px;
+		width: 100%;
 	}
 	.wp-caption-text {
 		width: 100%;
+	}
+	.post-entry {
+		padding: 3%;
 	}
 }
