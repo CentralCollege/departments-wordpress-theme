@@ -3,7 +3,367 @@ Theme Name: Central College Departments 2.0
 Theme URI: http://github.com/centralcollege
 Author: Gavin MacDonald '16
 Author URI: http://www.central.edu
-Description: A new and improved version of the theme for use on departments.central.edu. 
+Description: A new and improved version of the theme for use on departments.central.edu.
 Version: 0.1 beta
 
 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/*
+---------------------------------------------------
+Fonts loaded from this server
+---------------------------------------------------
+*/
+@font-face {
+font-family: 'ZurichBT-RomanCondensed';
+src: url('/fonts/ZurichCondensed.eot'); /* IE9 Compat Modes */
+src: url('/fonts/ZurichCondensed.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('/fonts/ZurichCondensed.woff') format('woff'), /* Modern Browsers */
+url('/fonts/ZurichCondensed.ttf') format('truetype') /* Safari, Android, iOS */
+}
+
+/*---------------------------------------------------*/
+/* Global */
+/*---------------------------------------------------*/
+html{
+	font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+	font-size: 24px;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+	color: #990000;
+}
+p {
+	line-height: 1.25em;
+}
+body {
+	background-image: url(images/graystripes2.png);
+}
+/*---------------------------------------------------*/
+/* My styles */
+/*---------------------------------------------------*/
+
+#wrapper{
+	margin: 0 auto;
+	width: 90%;
+	background-color: #fff;
+	box-shadow: 0 0 10px #000000;
+}
+/* Navigation */
+/*---------------------------------------------------*/
+
+.menu ul ul {
+	position: absolute;
+	left: 100%;
+	top: 0;
+}
+.menu ul {
+	display: none;
+	background: #990000;
+	position: absolute;
+	top: 100%;
+}
+.menu ul li {
+	float: none;
+	position: relative;
+	background-color: #efefef;
+}
+.menu ul li a:hover {
+	background: #990000;
+	color: #fff;
+}
+.menu li{
+	float:left;
+}
+.menu li:hover a {
+	color:#fff;
+	background: #ccc;
+}
+.menu li a {
+	display: block;
+	padding: 1em 1.5em;
+	color: #efefef;
+	text-decoration: none;
+}
+.menu li:hover > ul {
+	display: block;
+}
+.menu {
+	background: #990000;
+	list-style: none;
+	position: relative;
+	display: inline-block;	
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.menu:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+/* Sidebar */
+/*---------------------------------------------------*/
+.pagenav {
+	width: 30%;
+	float:right;
+	background-color: #fff;
+	text-decoration: none;
+}
+.pagenav a {
+	text-decoration: none;
+	color: #990000;
+	display: block;
+	padding: 10px 25px;
+	text-align: center;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	border-bottom: 1px dotted #990000;
+}
+.pagenav a:hover {
+	color: #fff;
+	background-color: #990000;
+}
+.searchform {
+	text-align: right;
+	padding: .5em;
+	background-color: #ccc;
+}
+
+/* Header */
+/*---------------------------------------------------*/
+
+#header{
+	display:block;
+	background-color: #990000;
+}
+.coverImage img{
+	width: 100%;
+	float:left;
+}
+.logoGroup{
+	text-align: center;
+	background-color: #fff;
+	position: absolute;
+	padding: .5em;
+}
+.logoGroup h1 {
+	font-size: 20px;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+	letter-spacing: 1px;
+	color: #707173;
+	text-transform: uppercase;
+}
+.image {
+	padding-bottom: 10px;
+}
+.image img {
+	width: 100%;
+}
+
+/* Content */
+/*---------------------------------------------------*/
+
+.post-entry {
+	border-bottom: 1px solid #ccc;
+	padding: 1%;
+}
+.post-entry a {
+	text-decoration: none;
+	color: #990000;
+}
+.post-entry h2 {
+	padding-bottom: .5em;
+}
+a.read-more {
+	float: right;
+	text-decoration: none;
+	color: #990000;
+}
+.posts {
+	width: 65%;
+	float: left;
+}
+.post-content {
+	padding: 1%;
+}
+.post-content p {
+	margin: 2% 0;
+}
+.post-content h2 {
+	color: #990000;
+    font-family: 'ZurichBT-RomanCondensed',arial,serif;
+    font-size: 3em;
+	padding-bottom: .25em;
+}
+.post-content a {
+	text-decoration: none;
+	color: #990000;
+}
+.post-content h3 {
+	color: #990000;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+	font-size: 2em;
+	margin: 2% 0;
+}
+.post-content h4 {
+	color: #990000;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+	font-size: 1.5em;
+	margin: 2% 0;
+}
+.post-content li {
+	margin: 2% 0;
+}
+.wp-caption {
+	font-size: .8em;
+	margin: 1%;
+}
+.alignright {
+	float: right;
+	margin: 1% 0 1% 1%;
+}
+.alignleft {
+	float: left;
+	margin: 1% 1% 1% 0;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+/* Footer */
+/*---------------------------------------------------*/
+
+.footer {
+	margin-top: 5%;
+	padding: 8px;
+	background-color: #efefef;
+	text-align: center;
+}
+#copyright {
+    margin-top: 1.5em;
+    text-align: center;
+}
+#copyright a {
+	text-decoration: none;
+	color: #000;
+}
+.clearboth {
+	clear: both;
+}
+.icon-facebook {
+  background-image: url("images/sprite.png");
+  background-position: 0px 0px;
+  width: 35px;
+  height: 35px;
+  display: inline-block
+}
+.icon-facebook:hover {
+  background-image: url("images/sprite.png");
+  background-position: 0px -35px;
+  width: 35px;
+  height: 35px;
+  display: inline-block
+}
+.icon-twitter {
+  background-image: url("images/sprite.png");
+  background-position: 0px -70px;
+  width: 35px;
+  height: 35px;
+  display: inline-block
+}
+.icon-twitter:hover {
+  background-image: url("images/sprite.png");
+  background-position: 0px -105px;
+  width: 35px;
+  height: 35px;
+  display: inline-block
+}
+.icon-youtube {
+  background-image: url("images/sprite.png");
+  background-position: 0px -140px;
+  width: 35px;
+  height: 35px;
+  display: inline-block
+}
+.icon-youtube:hover {
+  background-image: url("images/sprite.png");
+  background-position: 0px -175px;
+  width: 35px;
+  height: 35px;
+  display: inline-block
+}
+
+/*---------------------------------------------------*/
+/* Responsive */
+/*---------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+	.logoGroup{
+		position: inherit;
+		width: 100%;
+	}
+	.menu{
+		display: none;
+	}
+	.pagenav {
+		width: 100%;
+	}
+	.posts {
+		width: 100%;
+	}
+	.post-content img {
+		width: 50%;
+		height: 50%;
+	}
+	#wrapper {
+		box-shadow: 0px 20px 10px;
+		width: 100%;
+	}
+	.wp-caption-text {
+		width: 100%;
+	}
+	.post-entry {
+		padding: 3%;
+	}
+}

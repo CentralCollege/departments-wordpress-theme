@@ -58,7 +58,7 @@
 		));
 	}
 	add_action('widgets_init', 'central_department_widgets');
-		// ----------------------------------------------------------------
+	// ----------------------------------------------------------------
 	// Add the capability for editors to edit theme options
 	// ----------------------------------------------------------------
 	$role = get_role('editor');
@@ -66,5 +66,104 @@
 	// ----------------------------------------------------------------
 	// Only keep the last 5 revisions of any page.
 	// ----------------------------------------------------------------
-	define( 'WP_POST_REVISIONS', 5);
+	//define( 'WP_POST_REVISIONS', 5);
+	
+	// ----------------------------------------------------------------
+	// Gives option for custom background picture
+	// ----------------------------------------------------------------
+	$defaults = array(
+		'default-image'          => get_template_directory_uri() . '/images/header.jpg',
+		'width'                  => 1024,
+		'height'                 => 300,
+		'flex-height'            => true,
+		'flex-width'             => true,
+		'header-text'			 => false,
+	);
+	add_theme_support( 'custom-header', $defaults );
+	
+	function add_ie_html5_shim () {
+		echo '<!--[if lt IE 9]>';
+		echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
+		echo '<![endif]-->';
+	}
+	add_action('wp_head', 'add_ie_html5_shim');
+	
+	// ----------------------------------------------------------------
+	// Add menu functionality to template
+	// ----------------------------------------------------------------
+	function register_my_menu() {
+	  register_nav_menu('header-menu',__( 'Header Menu' ));
+	}
+	add_action( 'init', 'register_my_menu' );
+	
+	// ----------------------------------------------------------------
+	// Add menu for managing social media outlets
+	// ----------------------------------------------------------------
+	function central_theme_menu(){
+		add_menu_page('Social Media', 'Social Media', 'edit_pages', 'central-social-media', 'central_social_media', '//img.centralcollege.info/icons/balloon.png', 99);
+	}
+	add_action('admin_menu', 'central_theme_menu');
+	
+	//HTML for the menu goes here
+	function central_social_media(){
+		//Save data on form submit
+			if (isset($_POST['central_twitter_URL']) && strlen($_POST['central_twitter_URL']) > 0){
+				update_option('central_twitter_URL', $_POST['central_twitter_URL']);
+			} else {
+				update_option('central_twitter_URL','http://twitter.com/centralcollege'); 
+			}
+			if (isset($_POST['central_facebook_URL']) && strlen($_POST['central_facebook_URL']) > 0){
+				update_option('central_facebook_URL', $_POST['central_facebook_URL']);
+			} else {
+				update_option('central_facebook_URL','http://facebook.com/centralcollege');
+			}
+			if (isset($_POST['central_youtube_URL']) && strlen($_POST['central_youtube_URL']) > 0){
+				update_option('central_youtube_URL', $_POST['central_youtube_URL']);
+			} else {
+				update_option('central_youtube_URL','http://www.youtube.com/user/centralcollegeadm');
+			}?>
+
+	    <div class="wrap">
+			<h2>Social Media Settings</h2>
+            <p>Enter the URL to the following social media sites if applicable.</p>
+            <form name="form1" method="post" action="">
+            	<table class="form-table">
+                    <tbody>
+                        <tr>
+                            <th align="right">
+                                <label for="central_twitter_URL">Twitter Account:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="central_twitter_URL" id="central_twitter_URL" value="<?php echo get_option('central_twitter_url');?>" size="50" /><br />
+                                <span class="description">Enter the URL to your Twitter account. <?php echo get_option('central_twitter_url');?></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th align="right">
+                                <label for="central_facebook_URL">Facebook Account:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="central_facebook_URL" id="central_facebook_URL" value="<?php echo get_option('central_facebook_url');?>" size="50" /><br />
+                                <span class="description">Enter the URL to your Facebook account. <?php echo get_option('central_facebook_url');?></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th align="right">
+                                <label for="central_youtube_URL">YouTube Account:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="central_youtube_URL" id="central_youtube_URL" value="<?php echo get_option('central_youtube_url');?>" size="50" /><br />
+                                <span class="description">Enter the URL to your YouTube account. <?php echo get_option('central_youtube_url');?></span>
+                            </td>
+                        </tr>
+                        <!--- Need to add Facebook and youTube !--->
+                        <tr>
+                            <td colspan="2"><input id="submit" class="button button-primary" type="submit" value="Update settings" name="submit"></td>
+                        </tr> 
+                    </tbody>
+                </table>
+			</form>
+		</div>
+	<?php
+	}
 ?>
