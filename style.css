@@ -166,6 +166,7 @@ body {
 .searchform {
 	text-align: right;
 	padding: .5em;
+	background-color: #ccc;
 }
 
 /* Header */
@@ -203,7 +204,7 @@ body {
 /*---------------------------------------------------*/
 
 .post-entry {
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #ccc;
 	padding: 1%;
 }
 .post-entry a {
