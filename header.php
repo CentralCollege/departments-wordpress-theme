@@ -8,7 +8,7 @@
     </head>
     <body> 
     	<div class="logoGroup">	
-                <div class="logo"><a href="http://www.central.edu/"><img alt="Central College Logo" src="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo.png"></a></div>
+                <div class="logo"><a href="<?php echo home_url(); ?>"><img alt="Central College Logo" src="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo.png"></a></div>
                 <h1><?php bloginfo('name'); ?></h1>   
         </div> 
         <div class="coverImage">
