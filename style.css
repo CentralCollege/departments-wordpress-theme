@@ -336,6 +336,33 @@ a.read-more {
 }
 
 /*---------------------------------------------------*/
+/* Comment Section */
+/*---------------------------------------------------*/
+	ol.commentlist {
+		padding: 0%;
+	}
+	ol.commentlist li {
+		border: 1px solid #CCC;
+		padding: 1%;
+	}
+	ol.commentlist p {
+		padding: 1%;
+	}
+	ol.commentlist img {
+		width: 5%;
+		height: 5%;
+	}
+	a.comment-reply-link {
+		text-align:right;
+	}
+	cite.fn {
+		font-size: 1.25em;
+	}
+	span.says {
+		font-size: 1.25em;
+	}
+
+/*---------------------------------------------------*/
 /* Responsive */
 /*---------------------------------------------------*/
 @media only screen and (max-width: 480px) {

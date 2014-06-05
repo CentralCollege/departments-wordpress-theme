@@ -7,10 +7,12 @@
     	<?php wp_head(); ?>
     </head>
     <body> 
-    	<div class="logoGroup">	
-                <div class="logo"><a href="<?php echo home_url(); ?>"><img alt="Central College Logo" src="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo.png"></a></div>
+    	<a href="<?php echo home_url(); ?>">
+        	<div class="logoGroup">	
+                <div class="logo"><img alt="Central College Logo" src="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo.png"></div>
                 <h1><?php bloginfo('name'); ?></h1>   
-        </div> 
+        	</div>
+        </a> 
         <div class="coverImage">
             <img src="<?php header_image(); ?>" />
         </div>

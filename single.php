@@ -13,11 +13,7 @@
     
     <hr size="1"/>
 	
-	<?php comment_form(); ?> 
-    
-    <div class="comment list">
-    	<?php wp_list_comments( array( 'style' => 'div' ) ); ?>
-    </div>
+	<?php comments_template(); ?>  
     
     <div class="clearboth"></div>
     
