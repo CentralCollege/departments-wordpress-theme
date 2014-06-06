@@ -18,6 +18,8 @@
 			
         </div>
         
+        <?php dynamic_sidebar('central_footer_widgets') ?>
+        
         <p id="copyright">
 			&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?> at
 				<a title="Central College" href="http://www.central.edu">Central College</a>

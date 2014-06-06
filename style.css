@@ -251,8 +251,10 @@ a.read-more {
 	font-size: 1.5em;
 	margin: 2% 0;
 }
-.post-content li {
-	margin: 2% 0;
+.post-content ul li {
+	margin: 1% 1% 1% 5%;
+	list-style: disc outside none;
+	line-height: 1.5em;
 }
 .wp-caption {
 	font-size: .8em;
