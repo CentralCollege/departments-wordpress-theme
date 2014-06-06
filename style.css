@@ -70,7 +70,7 @@ html{
 	font-family: Arial, Helvetica, sans-serif;
 }
 h2 {
-	font-size: 24px;
+	font-size: 1.5em;
 	font-family: 'ZurichBT-RomanCondensed',arial,serif;
 	color: #990000;
 }
@@ -167,6 +167,16 @@ body {
 	text-align: right;
 	padding: .5em;
 	background-color: #ccc;
+}
+.Rightsidebar .widget h2 {
+	padding: .5em .5em .5em 0;
+}
+.Rightsidebar .widget_nav_menu a {
+	text-decoration: none;
+	color: #000;
+}
+.Rightsidebar .widget_nav_menu a:hover {
+	color: #efefef;
 }
 
 /* Header */
@@ -378,7 +388,7 @@ a.read-more {
 	.menu {
 		display: none;
 	}
-	.pagenav {
+	.Rightsidebar {
 		width: 100%;
 	}
 	.posts {
