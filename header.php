@@ -22,7 +22,7 @@
                 <div class="headbar">
                 	 <?php
 						if ( has_nav_menu( 'header-menu' ) ) {
-                    		wp_nav_menu( array( 'menu' => 'header-menu', 'menu_class' => 'menu',) ); 
+                    		wp_nav_menu( array( 'menu' => 'header-menu', 'menu_class' => 'top-menu',) ); 
 						} ?>
                 </div>
             </div>

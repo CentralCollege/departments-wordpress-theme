@@ -49,7 +49,9 @@
 		// Sidebar widgets
 		register_sidebar(array(
 			'name' => 'Sidebar widgets',
-			'id' => 'central_sidebar_widgets'
+			'id' => 'central_sidebar_widgets',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
 		));
 		//Footer widgets
 		register_sidebar(array(
