@@ -90,7 +90,7 @@ body {
 	background-color: #fff;
 	box-shadow: 0 0 10px #000000;
 }
-/* Navigation */
+/* Top menu navigation */
 /*---------------------------------------------------*/
 
 .top-menu ul ul {
@@ -150,6 +150,8 @@ body {
 	background-color: #fff;
 	text-decoration: none;
 }
+/* Right side page navigation */
+/*---------------------------------------------------*/
 .Rightsidebar .pagenav a {
 	text-decoration: none;
 	color: #990000;
@@ -168,6 +170,8 @@ body {
 	padding: .5em;
 	background-color: #ccc;
 }
+/* Right side widget styles */
+/*---------------------------------------------------*/
 .Rightsidebar .widget h2 {
 	padding: .5em .5em .5em 0;
 }
