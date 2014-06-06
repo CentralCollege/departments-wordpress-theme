@@ -295,8 +295,7 @@ a.read-more {
 /*---------------------------------------------------*/
 
 .footer {
-	margin-top: 5%;
-	padding: 8px;
+	padding: 2%;
 	background-color: #efefef;
 	text-align: center;
 }
@@ -352,6 +351,38 @@ a.read-more {
   width: 35px;
   height: 35px;
   display: inline-block
+}
+
+/* Footer Widgets*/
+/*---------------------------------------------------*/
+#footer-widgets{
+	border-top: 1px dotted #ccc;
+	border-bottom: 1px dotted #ccc;	
+	background-color: #efefef;
+}
+#footer-widgets .widget{
+	width: 30%;
+	float: left;
+	margin: 1%;
+	border-right: 1px solid #ccc;
+}
+#footer-widgets .widget:nth-child(3){
+	border-right: none;
+}
+#footer-widgets .widget li {
+	margin: 1% 1% 1% 5%;
+	list-style: disc outside none;
+	line-height: 1.5em;
+}
+#footer-widgets .widget ol li{
+	list-style-type: decimal;
+}
+#footer-widgets .widget ul li{
+	list-style-type: disc;
+}
+#footer-widgets .widget a:link, #footer-widgets .widget a:visited{
+	color: #990000;
+	text-decoration: none;
 }
 
 /*---------------------------------------------------*/

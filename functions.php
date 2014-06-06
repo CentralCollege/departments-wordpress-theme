@@ -56,7 +56,9 @@
 		//Footer widgets
 		register_sidebar(array(
 			'name' => 'Footer widgets',
-			'id' => 'central_footer_widgets'
+			'id' => 'central_footer_widgets',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
 		));
 	}
 	add_action('widgets_init', 'central_department_widgets');
