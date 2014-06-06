@@ -170,13 +170,13 @@
 	<?php
 	}
 	
-	add_action('wp_head', 'show_template');
+	//add_action('wp_head', 'show_template');
 
-	function show_template() {
+	//function show_template() {
 
-		global $template;
+	//	global $template;
 
-        print_r($template);
+     //   print_r($template);
 
-	}
+	//}
 ?>
