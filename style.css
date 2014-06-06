@@ -256,6 +256,9 @@ a.read-more {
 	list-style: disc outside none;
 	line-height: 1.5em;
 }
+.post-content ol li{
+	list-style-type: decimal;
+}
 .wp-caption {
 	font-size: .8em;
 	margin: 1%;
