@@ -100,6 +100,7 @@ a {
 	position: absolute;
 	left: 100%;
 	top: 0;
+	display: block;
 }
 .top-menu ul {
 	display: none;
@@ -121,7 +122,7 @@ a {
 }
 .top-menu li:hover a {
 	color:#990000;
-	background: #ccc;
+	background: #efefef;
 }
 .top-menu li a {
 	display: block;
@@ -136,7 +137,6 @@ a {
 	background: #990000;
 	list-style: none;
 	position: relative;
-	display: inline-block;	
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 .top-menu:after {
@@ -192,6 +192,9 @@ a {
 	padding-left: 1em;
 }
 .Rightsidebar .menu {
+	padding: .5em;
+}
+.Rightsidebar .textwidget {
 	padding: .5em;
 }
 
@@ -263,7 +266,7 @@ a.read-more {
 .post-content h2 {
 	color: #990000;
     font-family: 'ZurichBT-RomanCondensed',arial,serif;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 .post-content a {
 	text-decoration: none;
@@ -436,11 +439,14 @@ a.read-more {
 		position: inherit;
 		width: 100%;
 	}
-	.menu {
+	.top-menu {
 		display: none;
 	}
 	.Rightsidebar {
 		width: 100%;
+	}
+	.Rightsidebar .searchform {
+		text-align: center;
 	}
 	.posts {
 		width: 100%;
