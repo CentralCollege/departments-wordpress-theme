@@ -193,9 +193,11 @@ a {
 }
 .Rightsidebar .menu {
 	padding: .5em;
+	border-bottom: 1px dotted #cccccc;
 }
 .Rightsidebar .textwidget {
 	padding: .5em;
+	border-bottom: 1px dotted #cccccc;
 }
 
 /* Header */
