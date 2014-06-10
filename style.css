@@ -80,6 +80,9 @@ p {
 body {
 	background-image: url(images/graystripes2.png);
 }
+a {
+	text-decoration: none;
+}
 /*---------------------------------------------------*/
 /* My styles */
 /*---------------------------------------------------*/
@@ -117,7 +120,7 @@ body {
 	float:left;
 }
 .top-menu li:hover a {
-	color:#fff;
+	color:#990000;
 	background: #ccc;
 }
 .top-menu li a {
@@ -168,19 +171,28 @@ body {
 .Rightsidebar .searchform {
 	text-align: right;
 	padding: .5em;
-	background-color: #ccc;
+	background-color: #efefef;
 }
 /* Right side widget styles */
 /*---------------------------------------------------*/
+.Rightsidebar .widget {
+	background-color: #efefef;
+}
 .Rightsidebar .widget h2 {
-	padding: .5em .5em .5em 0;
+	padding: .5em 0 .25em .5em;
 }
 .Rightsidebar .widget_nav_menu a {
 	text-decoration: none;
 	color: #000;
 }
 .Rightsidebar .widget_nav_menu a:hover {
-	color: #efefef;
+	color: #990000;
+}
+.Rightsidebar .sub-menu {
+	padding-left: 1em;
+}
+.Rightsidebar .menu {
+	padding: .5em;
 }
 
 /* Header */
@@ -193,19 +205,24 @@ body {
 .coverImage img{
 	width: 100%;
 	float:left;
+	display: none;
 }
 .logoGroup{
 	text-align: center;
 	background-color: #fff;
-	position: absolute;
-	padding: .5em;
+	/*position: absolute;
+	padding: .5em;*/
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
 }
 .logoGroup h1 {
-	font-size: 20px;
+	font-size: 1.3em;
 	font-family: 'ZurichBT-RomanCondensed',arial,serif;
 	letter-spacing: 1px;
 	color: #707173;
 	text-transform: uppercase;
+	padding-bottom: 1em;
 }
 .image {
 	padding-bottom: 10px;
@@ -247,7 +264,6 @@ a.read-more {
 	color: #990000;
     font-family: 'ZurichBT-RomanCondensed',arial,serif;
     font-size: 3em;
-	padding-bottom: .25em;
 }
 .post-content a {
 	text-decoration: none;
