@@ -70,7 +70,7 @@ html{
 	font-family: Arial, Helvetica, sans-serif;
 }
 h2 {
-	font-size: 24px;
+	font-size: 1.5em;
 	font-family: 'ZurichBT-RomanCondensed',arial,serif;
 	color: #990000;
 }
@@ -79,6 +79,9 @@ p {
 }
 body {
 	background-image: url(images/graystripes2.png);
+}
+a {
+	text-decoration: none;
 }
 /*---------------------------------------------------*/
 /* My styles */
@@ -90,53 +93,53 @@ body {
 	background-color: #fff;
 	box-shadow: 0 0 10px #000000;
 }
-/* Navigation */
+/* Top menu navigation */
 /*---------------------------------------------------*/
 
-.menu ul ul {
+.top-menu ul ul {
 	position: absolute;
 	left: 100%;
 	top: 0;
+	display: block;
 }
-.menu ul {
+.top-menu ul {
 	display: none;
 	background: #990000;
 	position: absolute;
 	top: 100%;
 }
-.menu ul li {
+.top-menu ul li {
 	float: none;
 	position: relative;
 	background-color: #efefef;
 }
-.menu ul li a:hover {
+.top-menu ul li a:hover {
 	background: #990000;
 	color: #fff;
 }
-.menu li{
+.top-menu li{
 	float:left;
 }
-.menu li:hover a {
-	color:#fff;
-	background: #ccc;
+.top-menu li:hover a {
+	color:#990000;
+	background: #efefef;
 }
-.menu li a {
+.top-menu li a {
 	display: block;
 	padding: 1em 1.5em;
 	color: #efefef;
 	text-decoration: none;
 }
-.menu li:hover > ul {
+.top-menu li:hover > ul {
 	display: block;
 }
-.menu {
+.top-menu {
 	background: #990000;
 	list-style: none;
 	position: relative;
-	display: inline-block;	
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
-.menu:after {
+.top-menu:after {
 	content: "";
 	clear: both;
 	display: block;
@@ -144,13 +147,15 @@ body {
 
 /* Sidebar */
 /*---------------------------------------------------*/
-.pagenav {
+.Rightsidebar {
 	width: 30%;
 	float:right;
 	background-color: #fff;
 	text-decoration: none;
 }
-.pagenav a {
+/* Right side page navigation */
+/*---------------------------------------------------*/
+.Rightsidebar .pagenav a {
 	text-decoration: none;
 	color: #990000;
 	display: block;
@@ -159,14 +164,40 @@ body {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	border-bottom: 1px dotted #990000;
 }
-.pagenav a:hover {
+.Rightsidebar .pagenav a:hover {
 	color: #fff;
 	background-color: #990000;
 }
-.searchform {
+.Rightsidebar .searchform {
 	text-align: right;
 	padding: .5em;
-	background-color: #ccc;
+	background-color: #efefef;
+}
+/* Right side widget styles */
+/*---------------------------------------------------*/
+.Rightsidebar .widget {
+	background-color: #efefef;
+}
+.Rightsidebar .widget h2 {
+	padding: .5em 0 .25em .5em;
+}
+.Rightsidebar .widget_nav_menu a {
+	text-decoration: none;
+	color: #000;
+}
+.Rightsidebar .widget_nav_menu a:hover {
+	color: #990000;
+}
+.Rightsidebar .sub-menu {
+	padding-left: 1em;
+}
+.Rightsidebar .menu {
+	padding: .5em;
+	border-bottom: 1px dotted #cccccc;
+}
+.Rightsidebar .textwidget {
+	padding: .5em;
+	border-bottom: 1px dotted #cccccc;
 }
 
 /* Header */
@@ -179,19 +210,24 @@ body {
 .coverImage img{
 	width: 100%;
 	float:left;
+	display: none;
 }
 .logoGroup{
 	text-align: center;
 	background-color: #fff;
-	position: absolute;
-	padding: .5em;
+	/*position: absolute;
+	padding: .5em;*/
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
 }
 .logoGroup h1 {
-	font-size: 20px;
+	font-size: 1.3em;
 	font-family: 'ZurichBT-RomanCondensed',arial,serif;
 	letter-spacing: 1px;
 	color: #707173;
 	text-transform: uppercase;
+	padding-bottom: 1em;
 }
 .image {
 	padding-bottom: 10px;
@@ -232,8 +268,7 @@ a.read-more {
 .post-content h2 {
 	color: #990000;
     font-family: 'ZurichBT-RomanCondensed',arial,serif;
-    font-size: 3em;
-	padding-bottom: .25em;
+    font-size: 2.5em;
 }
 .post-content a {
 	text-decoration: none;
@@ -252,7 +287,12 @@ a.read-more {
 	margin: 2% 0;
 }
 .post-content li {
-	margin: 2% 0;
+	margin: 1% 1% 1% 5%;
+	list-style: disc outside none;
+	line-height: 1.5em;
+}
+.post-content ol li{
+	list-style-type: decimal;
 }
 .wp-caption {
 	font-size: .8em;
@@ -276,8 +316,7 @@ a.read-more {
 /*---------------------------------------------------*/
 
 .footer {
-	margin-top: 5%;
-	padding: 8px;
+	padding: 2%;
 	background-color: #efefef;
 	text-align: center;
 }
@@ -335,19 +374,81 @@ a.read-more {
   display: inline-block
 }
 
+/* Footer Widgets*/
+/*---------------------------------------------------*/
+#footer-widgets{
+	border-top: 1px dotted #ccc;
+	border-bottom: 1px dotted #ccc;	
+	background-color: #efefef;
+}
+#footer-widgets .widget{
+	width: 30%;
+	float: left;
+	margin: 1%;
+	border-right: 1px solid #ccc;
+}
+#footer-widgets .widget:nth-child(3){
+	border-right: none;
+}
+#footer-widgets .widget li {
+	margin: 1% 1% 1% 5%;
+	list-style: disc outside none;
+	line-height: 1.5em;
+}
+#footer-widgets .widget ol li{
+	list-style-type: decimal;
+}
+#footer-widgets .widget ul li{
+	list-style-type: disc;
+}
+#footer-widgets .widget a:link, #footer-widgets .widget a:visited{
+	color: #990000;
+	text-decoration: none;
+}
+
+/*---------------------------------------------------*/
+/* Comment Section */
+/*---------------------------------------------------*/
+	ol.commentlist {
+		padding: 0%;
+	}
+	ol.commentlist li {
+		border: 1px solid #CCC;
+		padding: 1%;
+	}
+	ol.commentlist p {
+		padding: 1%;
+	}
+	ol.commentlist img {
+		width: 5%;
+		height: 5%;
+	}
+	a.comment-reply-link {
+		text-align:right;
+	}
+	cite.fn {
+		font-size: 1.25em;
+	}
+	span.says {
+		font-size: 1.25em;
+	}
+
 /*---------------------------------------------------*/
 /* Responsive */
 /*---------------------------------------------------*/
 @media only screen and (max-width: 480px) {
-	.logoGroup{
+	.logoGroup {
 		position: inherit;
 		width: 100%;
 	}
-	.menu{
+	.top-menu {
 		display: none;
 	}
-	.pagenav {
+	.Rightsidebar {
 		width: 100%;
+	}
+	.Rightsidebar .searchform {
+		text-align: center;
 	}
 	.posts {
 		width: 100%;

@@ -1,4 +1,8 @@
 	<div class="clearboth"></div>
+    	<div id="footer-widgets">
+        	<?php dynamic_sidebar('central_footer_widgets') ?>
+            <div class="clearboth"></div>
+        </div>
     	<div class="footer">
             <?php if (strlen(get_option('central_facebook_url')) > 0) {?>
             	<a href="<?php echo get_option('central_facebook_url');?>" class="icon-facebook"> </a>
@@ -16,12 +20,12 @@
                 echo '<a href="http://youtube.com/centralcollegeadm" class="icon-youtube"> </a>';
             } ?>
 			
-        </div>
-        
         <p id="copyright">
 			&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?> at
-				<a title="Central College" href="http://www.central.edu">Central College</a>
+			<a title="Central College" href="http://www.central.edu">Central College</a>
 		</p>
+        
+        </div>
     </div>
 </div>
     <?php wp_footer(); ?>

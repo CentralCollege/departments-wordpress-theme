@@ -34,7 +34,6 @@
 		unregister_widget('WP_Widget_Archives');
 		unregister_widget('WP_Widget_Meta');
 		unregister_widget('WP_Widget_Search');
-		unregister_widget('WP_Widget_Text');
 		unregister_widget('WP_Widget_Categories');
 		unregister_widget('WP_Widget_Recent_Posts');
 		unregister_widget('WP_Widget_Recent_Comments');
@@ -49,12 +48,16 @@
 		// Sidebar widgets
 		register_sidebar(array(
 			'name' => 'Sidebar widgets',
-			'id' => 'central_sidebar_widgets'
+			'id' => 'central_sidebar_widgets',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
 		));
 		//Footer widgets
 		register_sidebar(array(
 			'name' => 'Footer widgets',
-			'id' => 'central_footer_widgets'
+			'id' => 'central_footer_widgets',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
 		));
 	}
 	add_action('widgets_init', 'central_department_widgets');
@@ -166,4 +169,14 @@
 		</div>
 	<?php
 	}
+	
+	//add_action('wp_head', 'show_template');
+
+	//function show_template() {
+
+	//	global $template;
+
+     //   print_r($template);
+
+	//}
 ?>
