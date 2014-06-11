@@ -228,12 +228,12 @@ padding: .5em;
 margin: 0 auto;
 position: relative;*/
 }
-.noImage .logoGroup {
+.logoGroupNoImage{
 	background-color: #ffffff;
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
-	width: 90%;
+	width: 90%;	
 }
 .logoGroup h1 {
 font-size: 1.3em;
