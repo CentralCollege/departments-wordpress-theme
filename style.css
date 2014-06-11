@@ -83,6 +83,12 @@ body {
 a {
 	text-decoration: none;
 }
+strong {
+	font-weight:bold;
+}
+em {
+	font-style: italic;
+}
 /*---------------------------------------------------*/
 /* My styles */
 /*---------------------------------------------------*/
@@ -97,10 +103,10 @@ a {
 /*---------------------------------------------------*/
 
 .top-menu ul ul {
+	display: block;
 	position: absolute;
 	left: 100%;
 	top: 0;
-	display: block;
 }
 .top-menu ul {
 	display: none;
@@ -137,6 +143,7 @@ a {
 	background: #990000;
 	list-style: none;
 	position: relative;
+	display: inline-block;	
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 .top-menu:after {
@@ -210,18 +217,36 @@ a {
 .coverImage img{
 	width: 100%;
 	float:left;
-	display: none;
+	/*display: none;*/
 }
 .logoGroup{
 	text-align: center;
 	background-color: #fff;
-	/*position: absolute;
-	padding: .5em;*/
-	width: 90%;
+	position: absolute;
+	padding: .5em;
+	/*width: 90%;
 	margin: 0 auto;
-	position: relative;
+	position: relative;*/
 }
 .logoGroup h1 {
+	font-size: 1.3em;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+	letter-spacing: 1px;
+	color: #707173;
+	text-transform: uppercase;
+	padding-bottom: 1em;
+}
+.logoGroupNoImage{
+	background-color: #ffffff;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	width: 90%;
+	margin-bottom: 2%;
+	box-shadow: 0 0 10px #000000;
+	border-radius: 0px 0px 20px 20px;
+}
+.logoGroupNoImage h1 {
 	font-size: 1.3em;
 	font-family: 'ZurichBT-RomanCondensed',arial,serif;
 	letter-spacing: 1px;
@@ -409,62 +434,62 @@ a.read-more {
 /*---------------------------------------------------*/
 /* Comment Section */
 /*---------------------------------------------------*/
-	ol.commentlist {
-		padding: 0%;
-	}
-	ol.commentlist li {
-		border: 1px solid #CCC;
-		padding: 1%;
-	}
-	ol.commentlist p {
-		padding: 1%;
-	}
-	ol.commentlist img {
-		width: 5%;
-		height: 5%;
-	}
-	a.comment-reply-link {
-		text-align:right;
-	}
-	cite.fn {
-		font-size: 1.25em;
-	}
-	span.says {
-		font-size: 1.25em;
-	}
+ol.commentlist {
+	padding: 0%;
+}
+ol.commentlist li {
+	border: 1px solid #CCC;
+	padding: 1%;
+}
+ol.commentlist p {
+	padding: 1%;
+}
+ol.commentlist img {
+	width: 5%;
+	height: 5%;
+}
+a.comment-reply-link {
+	text-align:right;
+}
+cite.fn {
+	font-size: 1.25em;
+}
+span.says {
+	font-size: 1.25em;
+}
 
 /*---------------------------------------------------*/
 /* Responsive */
 /*---------------------------------------------------*/
 @media only screen and (max-width: 480px) {
-	.logoGroup {
-		position: inherit;
-		width: 100%;
-	}
-	.top-menu {
-		display: none;
-	}
-	.Rightsidebar {
-		width: 100%;
-	}
-	.Rightsidebar .searchform {
-		text-align: center;
-	}
-	.posts {
-		width: 100%;
-	}
-	.post-content img {
-		width: 50%;
-		height: 50%;
-	}
-	#wrapper {
-		box-shadow: 0px 20px 10px;
-		width: 100%;
-	}
-	.wp-caption-text {
-		width: 100%;
-	}
-	.post-entry {
-		padding: 3%;
-	}
+.logoGroup {
+	position: inherit;
+	width: 100%;
+}
+.top-menu {
+	display: none;
+}
+.Rightsidebar {
+	width: 100%;
+}
+.Rightsidebar .searchform {
+	text-align: center;
+}
+.posts {
+	width: 100%;
+}
+.post-content img {
+	width: 50%;
+	height: 50%;
+}
+#wrapper {
+	box-shadow: 0px 20px 10px;
+	width: 100%;
+}
+.wp-caption-text {
+	width: 100%;
+}
+.post-entry {
+	padding: 3%;
+}
 }

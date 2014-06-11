@@ -6,16 +6,27 @@
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
     	<?php wp_head(); ?>
     </head>
-    <body> 
-    	<a href="<?php echo home_url(); ?>">
-        	<div class="logoGroup">	
-                <div class="logo"><img alt="Central College Logo" src="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo.png"></div>
-                <h1><?php bloginfo('name'); ?></h1>   
-        	</div>
-        </a> 
-        <div class="coverImage">
-            <img src="<?php header_image(); ?>" />
-        </div>
+    <body>
+		<?php if (!is_front_page() && get_option('active_banner_photo') == 'no') { 
+			
+		?> 
+             <a href="<?php echo home_url(); ?>">
+                <div class="logoGroupNoImage">	
+                    <div class="logo"><img alt="Central College Logo" src="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo.png"></div>
+                    <h1><?php bloginfo('name'); ?></h1>   
+                </div>
+            </a>
+        <?php }else{?>
+        	<a href="<?php echo home_url(); ?>">
+                <div class="logoGroup">	
+                    <div class="logo"><img alt="Central College Logo" src="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo.png"></div>
+                    <h1><?php bloginfo('name'); ?></h1>   
+                </div>
+            </a> 
+            <div class="coverImage">
+                <img src="<?php header_image(); ?>" />
+            </div>
+        <?php }?>
       
         <div id="wrapper">
             <div id="header">

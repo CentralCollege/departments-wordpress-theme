@@ -102,10 +102,10 @@
 	// ----------------------------------------------------------------
 	// Add menu for managing social media outlets
 	// ----------------------------------------------------------------
-	function central_theme_menu(){
-		add_menu_page('Social Media', 'Social Media', 'edit_pages', 'central-social-media', 'central_social_media', '//img.centralcollege.info/icons/balloon.png', 99);
+	function central_social_menu(){
+		add_menu_page('Social Media', 'Social Media', 'edit_pages', 'central-social-media', 'central_social_media', '//img.centralcollege.info/icons/balloon.png', 98);
 	}
-	add_action('admin_menu', 'central_theme_menu');
+	add_action('admin_menu', 'central_social_menu');
 	
 	//HTML for the menu goes here
 	function central_social_media(){
@@ -167,6 +167,45 @@
                 </table>
 			</form>
 		</div>
+	<?php
+	}
+	
+	function central_theme_settings(){
+		add_menu_page('Theme Settings', 'Theme Settings', 'edit_pages', 'theme-settings', 'central_theme_page', 'dashicons-art', 99);
+	}
+	add_action('admin_menu', 'central_theme_settings');
+	
+	function central_theme_page(){
+		if (isset($_POST['active_banner_photo']) ) {
+			update_option('active_banner_photo', $_POST['active_banner_photo']);
+		}
+			
+    ?>
+		<div class="wrapper">
+			<h2>Theme Settings</h2>
+            <form name="form2" method="post" action="">
+            	<table class="form-table">
+                    <tbody>
+                        <tr>
+                            <th align="right">
+            					<label for="active_banner_photo">Banner photo on all pages: </label>
+                            </th>
+                            <td>
+                                <select id="active_banner_photo" name="active_banner_photo">
+                                	<option value="<?php echo get_option('active_banner_photo')?>" selected="selected"><?php echo get_option('active_banner_photo')?></option>
+                                    <option value="-----------" disabled="disabled">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input id="submit" class="button button-primary" type="submit" value="Update settings" name="submit"></td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </form>
+        </div>
 	<?php
 	}
 	
