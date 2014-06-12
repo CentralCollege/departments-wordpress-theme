@@ -89,6 +89,46 @@ strong {
 em {
 	font-style: italic;
 }
+
+/*---------------------------------------------------*/
+/* Alert Boxes */
+/*---------------------------------------------------*/
+.infoBox{
+	background-image:url(//img.centralcollege.info/icons/information.png);
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #006699; 
+	background-color:#def4fe; 
+	padding: 5px 5px 5px 25px;
+	margin: 5px;
+}
+.successBox{
+	background-image:url("//img.centralcollege.info/icons/accept.png");
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #669900; 
+	background-color: #dff2bf; 
+	padding: 5px 5px 5px 25px;
+	margin: 5px;
+}
+.warningBox{
+	background-image:url("//img.centralcollege.info/icons/error.png");
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #FFCC00; 
+	background-color: #FFFFCC; 
+	padding: 5px 5px 5px 25px; 
+	margin: 5px;
+}
+.errorBox{
+	background-image:url("//img.centralcollege.info/icons/exclamation.png");
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #CC0000; 
+	background-color: #FFCCCC; 
+	padding: 5px 5px 5px 25px; 
+	margin: 5px;
+}
 /*---------------------------------------------------*/
 /* My styles */
 /*---------------------------------------------------*/
@@ -283,6 +323,9 @@ a.read-more {
 .posts {
 	width: 65%;
 	float: left;
+}
+.postsCustom {
+	width: 100%;
 }
 .post-content {
 	padding: 1%;
