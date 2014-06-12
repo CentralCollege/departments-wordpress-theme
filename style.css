@@ -80,9 +80,7 @@ p {
 body {
 	background-image: url(images/graystripes2.png);
 }
-a {
-	text-decoration: none;
-}
+
 strong {
 	font-weight:bold;
 }
@@ -259,6 +257,9 @@ em {
 	float:left;
 	/*display: none;*/
 }
+.logoLink a {
+	text-decoration: none;
+}
 .logoGroup{
 	text-align: center;
 	background-color: #fff;
@@ -339,8 +340,12 @@ a.read-more {
     font-size: 2.5em;
 }
 .post-content a {
-	text-decoration: none;
 	color: #990000;
+	text-decoration: none;
+	border-bottom: 1px dotted #990000;
+}
+.post-content a:hover {
+	border-bottom: none;
 }
 .post-content h3 {
 	color: #990000;
