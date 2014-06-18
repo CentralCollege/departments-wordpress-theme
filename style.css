@@ -137,6 +137,69 @@ em {
 	background-color: #fff;
 	box-shadow: 0 0 10px #000000;
 }
+
+/* ------------------ Global Classes for styling elements  -------------------- */
+table, td, th{
+	margin: 5px;
+	padding: 5px;
+}
+td{
+	line-height: 1.2em;
+}
+/* BaseTable styles */
+table.tableBase{
+	width: 80%;
+	margin: 0 auto;	
+}
+.centerTable{
+	margin: 0 auto;
+    width: 80%;
+}
+
+/*For IE*/
+.tableTextAlignLeft td{
+	text-align:left;
+}
+
+/* Table that boxes in the contents */
+.tableBox th{
+	font-weight:bold;
+	background-color: #990000;
+	color: #fff;
+	border:1px solid #990000;
+}
+.tableBox td{
+	border: 1px solid #ccc;
+}
+
+/* Table with line dividers */
+.tableBorder th{
+	font-weight:bold;
+	color:#cb2026;
+	border-bottom:1px solid #cb2026
+}
+.tableBorder td{
+	border-bottom: 1px solid #ccc;
+}
+
+/* Table with hover effect */
+table.tableHover{
+	width: 80%;
+	margin: 0 auto;	
+}
+.tableHover th{
+	font-weight:bold;
+	color:#cb2026;
+	border-bottom:1px solid #cb2026;
+	text-align: left;
+}
+.tableHover td{
+	border-bottom: 1px solid #ccc;
+}
+.tableHover tr:hover td{
+	background-color: #ffff99;
+	cursor: default;
+}
 /* Top menu navigation */
 /*---------------------------------------------------*/
 
@@ -533,7 +596,6 @@ span.says {
 	width: 100%;
 }
 .post-content img {
-	width: 50%;
 	height: 50%;
 }
 #wrapper {

@@ -13,7 +13,6 @@ Template Name: Full Width
     <h2><?php the_title() ?></h2>
     
     <?php the_content(); ?>
-    
     <div class="clearboth"></div>
     </div>
 
