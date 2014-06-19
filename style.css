@@ -92,7 +92,7 @@ em {
 /* Alert Boxes */
 /*---------------------------------------------------*/
 .infoBox{
-	background-image:url(//img.centralcollege.info/icons/information.png);
+	background-image:url("//img.centralcollege.info/icons/information.png");
 	background-repeat:no-repeat;
      background-position: 5px 5px;
 	border: 1px solid #006699; 
@@ -607,5 +607,12 @@ span.says {
 }
 .post-entry {
 	padding: 3%;
+}
+#footer-widgets .widget {
+	width: 100%;
+	border-bottom: 1px dotted #ccc;
+}
+#footer-widgets {
+	border: none;
 }
 }
