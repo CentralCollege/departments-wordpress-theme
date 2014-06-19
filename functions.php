@@ -209,11 +209,36 @@
 	<?php
 	}
 	
-	// Add custom tinyMCE styles
+	// Add custom tinyMCE stylesheet
 	function add_editor_styles() {
 		add_editor_style('custom-editor-style.css');
 	}
-	add_action('init', 'add_editor_styles' );
+	add_action('init', 'add_editor_styles');
+	
+	// Add formats dropdown to tinyMCE
+	function cui_mce_buttons( $buttons ) {
+		array_unshift( $buttons, 'styleselect' );
+		return $buttons;
+	}
+	// Register our callback to the appropriate filter
+	add_filter('mce_buttons_2', 'cui_mce_buttons');
+	
+
+	// Callback function to filter the MCE settings
+	function add_tinyMCE_formats( $init_array ) {  
+		$style_formats = array(  
+			array(  
+				'title' => 'errorBox',  
+				'selector' => 'p,div',  
+				'classes' => 'errorBox',
+				'wrapper' => true,
+			),
+		);  
+		$init_array['style_formats'] = json_encode( $style_formats );
+		return $init_array;  
+	} 
+	// Attach callback to 'tiny_mce_before_init' 
+	add_filter( 'tiny_mce_before_init', 'add_tinyMCE_formats' ); 
 	
 	
 	
