@@ -1,0 +1,54 @@
+
+/*---------------------------------------------------*/
+/* Alert Boxes */
+/*---------------------------------------------------*/
+infoBox#tinymce.wp-editor {
+	background-image:url("//img.centralcollege.info/icons/information.png");
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #006699; 
+	background-color:#def4fe; 
+	padding: 5px 5px 5px 25px;
+	margin: 5px;
+}
+.successBox{
+	background-image:url("//img.centralcollege.info/icons/accept.png");
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #669900; 
+	background-color: #dff2bf; 
+	padding: 5px 5px 5px 25px;
+	margin: 5px;
+}
+.warningBox{
+	background-image:url("//img.centralcollege.info/icons/error.png");
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #FFCC00; 
+	background-color: #FFFFCC; 
+	padding: 5px 5px 5px 25px; 
+	margin: 5px;
+}
+.errorBox{
+	background-image:url("//img.centralcollege.info/icons/exclamation.png");
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #CC0000; 
+	background-color: #FFCCCC; 
+	padding: 5px 5px 5px 25px; 
+	margin: 5px;
+}
+/*---------------------------------------------------*/
+/* Headers */
+/*---------------------------------------------------*/
+h2 {
+	font-size: 1.5em;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+	color: #990000;
+}
+h3 {
+	color: #990000;
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+	font-size: 2em;
+	margin: 2% 0;
+}

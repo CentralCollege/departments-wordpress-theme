@@ -209,6 +209,13 @@
 	<?php
 	}
 	
+	function add_editor_styles() {
+		add_editor_style('custom-editor-style.css');
+	}
+	add_action('init', 'add_editor_styles' );
+	
+	
+	
 	//add_action('wp_head', 'show_template');
 
 	//function show_template() {
