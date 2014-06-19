@@ -455,6 +455,7 @@ a.read-more {
 	padding: 2%;
 	background-color: #efefef;
 	text-align: center;
+	margin: 0 auto;
 }
 #copyright {
     margin-top: 1.5em;
@@ -516,6 +517,7 @@ a.read-more {
 	border-top: 1px dotted #ccc;
 	border-bottom: 1px dotted #ccc;	
 	background-color: #efefef;
+	margin: 0 auto;
 }
 #footer-widgets .widget{
 	width: 30%;

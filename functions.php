@@ -221,7 +221,7 @@
 		return $buttons;
 	}
 	// Register our callback to the appropriate filter
-	add_filter('mce_buttons_2', 'cui_mce_buttons');
+	add_filter('mce_buttons', 'cui_mce_buttons');
 	
 
 	// Callback function to filter the MCE settings
@@ -229,8 +229,26 @@
 		$style_formats = array(  
 			array(  
 				'title' => 'errorBox',  
-				'selector' => 'p,div',  
+				'block' => 'p',  
 				'classes' => 'errorBox',
+				'wrapper' => true,
+			),
+			array(
+				'title' => 'infoBox',
+				'block' => 'p',
+				'classes' => 'infoBox',
+				'wrapper' => true,
+			),
+			array(  
+				'title' => 'successBox',  
+				'block' => 'p',  
+				'classes' => 'successBox',
+				'wrapper' => true,
+			),
+			array(  
+				'title' => 'warningBox',  
+				'block' => 'p',  
+				'classes' => 'warningBox',
 				'wrapper' => true,
 			),
 		);  

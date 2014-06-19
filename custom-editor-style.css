@@ -2,7 +2,7 @@
 /*---------------------------------------------------*/
 /* Alert Boxes */
 /*---------------------------------------------------*/
-infoBox#tinymce.wp-editor {
+.infoBox {
 	background-image:url("//img.centralcollege.info/icons/information.png");
 	background-repeat:no-repeat;
      background-position: 5px 5px;
