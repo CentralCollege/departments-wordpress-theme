@@ -199,6 +199,19 @@
                                 </select>
                             </td>
                         </tr>
+                         <tr>
+                            <th align="right">
+            					<label for="active_side_nav">Side navigation on all pages: </label>
+                            </th>
+                            <td>
+                                <select id="active_side_nav" name="active_side_nav">
+                                	<option value="<?php echo get_option('active_side_nav')?>" selected="selected"><?php echo get_option('active_side_nav')?></option>
+                                    <option value="-----------" disabled="disabled">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </td>
+                        </tr>
                         <tr>
                             <td colspan="2"><input id="submit" class="button button-primary" type="submit" value="Update settings" name="submit"></td>
                         </tr> 
