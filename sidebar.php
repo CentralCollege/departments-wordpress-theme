@@ -10,5 +10,5 @@
 		?>
 		</ul> 	           
 		<?php dynamic_sidebar('central_sidebar_widgets');?>
-    </div>
  <?php }?>
+</div>

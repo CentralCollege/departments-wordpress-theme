@@ -179,7 +179,12 @@
 		if (isset($_POST['active_banner_photo']) ) {
 			update_option('active_banner_photo', $_POST['active_banner_photo']);
 		}
-			
+		if (isset($_POST['active_side_nav']) ) {
+			update_option('active_side_nav', $_POST['active_side_nav']);
+		}
+		if (isset($_POST['directory_url']) ) {
+			update_option('directory_url', $_POST['directory_url']);
+		}  	
     ?>
 		<div class="wrapper">
 			<h2>Theme Settings</h2>
@@ -201,10 +206,10 @@
                         </tr>
                          <tr>
                             <th align="right">
-            					<label for="active_side_nav">Side navigation on all pages: </label>
+           					  <label for="active_side_nav">Side navigation on all pages: </label>
                             </th>
                             <td>
-                                <select id="active_side_nav" name="active_side_nav">
+                              <select id="active_side_nav" name="active_side_nav">
                                 	<option value="<?php echo get_option('active_side_nav')?>" selected="selected"><?php echo get_option('active_side_nav')?></option>
                                     <option value="-----------" disabled="disabled">
                                     <option value="yes">Yes</option>
@@ -217,10 +222,57 @@
                         </tr> 
                     </tbody>
                 </table>
-            </form>
+            </form> 
+            <h2>Directory Settings</h2>
+            <form name="form3" method="post" action="">
+            	<table class="form-table">
+                    <tbody>
+                        <tr>
+                            <th align="right">
+            					<label for="directory_url">Directory listing url: </label>
+                            </th>
+                            <td>
+                            	<input type="text" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" >
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2">
+                        		<input id="submit" class="button button-primary" type="submit" value="Update URL" name="submit">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+			</form>
         </div>
 	<?php
 	}
+	?>
+    <?php
+	
+		$xml = simplexml_load_file('directory_url');
+		$directoryOutput = "";
+		foreach($xml->employee as $emp){
+			$directoryOutput = $directoryOutput . "<div class='staffListing' style='border-bottom: 1px solid #ccc; min-height: 200px;'>";
+			if ($emp->hasPhoto == "yes"){
+				$directoryOutput = $directoryOutput . "<img src='http://www.central.edu/humanresources/photodirectory/images/" . $emp->username . ".jpg' alt='" . $emp->firstName . " " . $emp->lastName. "' style='float:right; padding: 1px; margin: 1px; border: 1px solid #ccc;'/>";
+			}
+			$directoryOutput = $directoryOutput . "<h4>" . $emp->firstName . " " . $emp->lastName. "</h4>";
+			$directoryOutput = $directoryOutput . "<p>" . $emp->title . "<br />";
+			$directoryOutput = $directoryOutput . "<strong>Office:</strong> " . $emp->officeLocation . "<br />";
+			$directoryOutput = $directoryOutput . "<strong>Phone:</strong> " . $emp->phoneNumber . "<br />";
+			$directoryOutput = $directoryOutput . "<strong>Email:</strong> <a href='mailto:" . $emp->email . "'>" . $emp->email . "</a></p>";
+			$directoryOutput = $directoryOutput . "</div>";
+		}
+			$add_directory_to_site = array(
+				'post_title'	=> 'Department Directory',
+				'post_content'	=> $directoryOutput,
+				'post_name'	=> 'department-directory',
+				'post_status'	=> 'draft',
+				'post_type'	=> 'page',
+				'post_author'	=> $user_ID,
+				'ping_status'	=> 'closed'
+			);	
+			wp_insert_post($add_directory_to_site);
 	
 	// Add custom tinyMCE stylesheet
 	function add_editor_styles() {
