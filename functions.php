@@ -185,6 +185,9 @@
 		if (isset($_POST['directory_url']) ) {
 			update_option('directory_url', $_POST['directory_url']);
 				if(get_page_by_path('department-directory') == NULL){
+					?><div class="updated">
+                    		<p> Directory added.</p>
+                      </div><?php
 					// Get current user's ID
 					$user_ID = get_current_user_id();
 					// Query the API to get directory information
@@ -213,7 +216,10 @@
 							'ping_status'	=> 'closed'
 						);	
 						wp_insert_post($add_directory_to_site);
-				} else {				
+				} else {	
+						?><div class="updated">
+                        	<p>Directory updated.</p>
+                          </div><?php			
 						//Get page ID
 						$page = get_page_by_path('department-directory');	
 						
