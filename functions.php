@@ -179,7 +179,73 @@
 		if (isset($_POST['active_banner_photo']) ) {
 			update_option('active_banner_photo', $_POST['active_banner_photo']);
 		}
-			
+		if (isset($_POST['active_side_nav']) ) {
+			update_option('active_side_nav', $_POST['active_side_nav']);
+		}
+		if (isset($_POST['directory_url']) ) {
+			update_option('directory_url', $_POST['directory_url']);
+				if(get_page_by_path('department-directory') == NULL){
+					?><div class="updated">
+                    		<p> Directory added.</p>
+                      </div><?php
+					// Get current user's ID
+					$user_ID = get_current_user_id();
+					// Query the API to get directory information
+					$xml = simplexml_load_file(get_option('directory_url'));
+					$directoryOutput = "";
+					foreach($xml->employee as $emp){
+						$directoryOutput = $directoryOutput . "<div class='staffListing' style='border-bottom: 1px solid #ccc; min-height: 200px;'>";
+						if ($emp->hasPhoto == "yes"){
+							$directoryOutput = $directoryOutput . "<img src='http://www.central.edu/humanresources/photodirectory/images/" . $emp->username . ".jpg' alt='" . $emp->firstName . " " . $emp->lastName. "' style='float:right; padding: 1px; margin: 1px; border: 1px solid #ccc;'/>";
+						}
+						$directoryOutput = $directoryOutput . "<h4>" . $emp->firstName . " " . $emp->lastName. "</h4>";
+						$directoryOutput = $directoryOutput . "<p>" . $emp->title . "<br />";
+						$directoryOutput = $directoryOutput . "<strong>Office:</strong> " . $emp->officeLocation . "<br />";
+						$directoryOutput = $directoryOutput . "<strong>Phone:</strong> " . $emp->phoneNumber . "<br />";
+						$directoryOutput = $directoryOutput . "<strong>Email:</strong> <a href='mailto:" . $emp->email . "'>" . $emp->email . "</a></p>";
+						$directoryOutput = $directoryOutput . "</div>";
+					}
+						//Create new directory page
+						$add_directory_to_site = array(
+							'post_title'	=> 'Department Directory',
+							'post_content'	=> $directoryOutput,
+							'post_name'	=> 'department-directory',
+							'post_status'	=> 'draft',
+							'post_type'	=> 'page',
+							'post_author'	=> $user_ID,
+							'ping_status'	=> 'closed'
+						);	
+						wp_insert_post($add_directory_to_site);
+				} else {	
+						?><div class="updated">
+                        	<p>Directory updated.</p>
+                          </div><?php			
+						//Get page ID
+						$page = get_page_by_path('department-directory');	
+						
+						//Get directory info
+						$xml = simplexml_load_file(get_option('directory_url'));
+						$directoryOutput = "";
+						foreach($xml->employee as $emp){
+							$directoryOutput = $directoryOutput . "<div class='staffListing' style='border-bottom: 1px solid #ccc; min-height: 200px;'>";
+							if ($emp->hasPhoto == "yes"){
+								$directoryOutput = $directoryOutput . "<img src='http://www.central.edu/humanresources/photodirectory/images/" . $emp->username . ".jpg' alt='" . $emp->firstName . " " . $emp->lastName. "' style='float:right; padding: 1px; margin: 1px; border: 1px solid #ccc;'/>";
+							}
+							$directoryOutput = $directoryOutput . "<h4>" . $emp->firstName . " " . $emp->lastName. "</h4>";
+							$directoryOutput = $directoryOutput . "<p>" . $emp->title . "<br />";
+							$directoryOutput = $directoryOutput . "<strong>Office:</strong> " . $emp->officeLocation . "<br />";
+							$directoryOutput = $directoryOutput . "<strong>Phone:</strong> " . $emp->phoneNumber . "<br />";
+							$directoryOutput = $directoryOutput . "<strong>Email:</strong> <a href='mailto:" . $emp->email . "'>" . $emp->email . "</a></p>";
+							$directoryOutput = $directoryOutput . "</div>";
+						}
+						
+						$update_directory_page = array(
+							'ID' => $page->ID,
+							'post_content'	=> $directoryOutput
+						);
+						wp_update_post($update_directory_page);
+				}
+		}  	
     ?>
 		<div class="wrapper">
 			<h2>Theme Settings</h2>
@@ -199,15 +265,115 @@
                                 </select>
                             </td>
                         </tr>
+                         <tr>
+                            <th align="right">
+           					  <label for="active_side_nav">Side navigation on all pages: </label>
+                            </th>
+                            <td>
+                              <select id="active_side_nav" name="active_side_nav">
+                                	<option value="<?php echo get_option('active_side_nav')?>" selected="selected"><?php echo get_option('active_side_nav')?></option>
+                                    <option value="-----------" disabled="disabled">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </td>
+                        </tr>
                         <tr>
                             <td colspan="2"><input id="submit" class="button button-primary" type="submit" value="Update settings" name="submit"></td>
                         </tr> 
                     </tbody>
                 </table>
-            </form>
+            </form> 
+            <h2>Directory Settings</h2>
+            <form name="form3" method="post" action="">
+            	<table class="form-table">
+                    <tbody>
+                      <?php if (current_user_can('edit_themes') ) { ?>
+                         <tr>
+                            <th align="right">
+            					<label for="directory_url">Directory listing url: </label>
+                            </th>
+                            <td>    
+                            		<input type="text" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" size="80" >
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2">
+                        		<input id="submit" class="button button-primary" type="submit" value="Update URL" name="submit">
+                            </td>
+                      <?php } else { ?>
+                        <tr>
+                        	<td colspan="2">
+                            	<input type="hidden" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" >
+                            	<input id="submit" class="button button-primary" type="submit" value="Update Directory" name="submit">
+                            </td>
+                      <?php } ?>
+                        </tr>
+                    </tbody>
+                </table>
+			</form>
         </div>
 	<?php
 	}
+	?>
+    <?php
+		
+		
+	
+	// Add custom tinyMCE stylesheet
+	function add_editor_styles() {
+		add_editor_style('custom-editor-style.css');
+	}
+	add_action('init', 'add_editor_styles');
+	
+	// Add formats dropdown to tinyMCE
+	function cui_mce_buttons( $buttons ) {
+		array_unshift( $buttons, 'styleselect' );
+		return $buttons;
+	}
+	// Register our callback to the appropriate filter
+	add_filter('mce_buttons', 'cui_mce_buttons');
+	
+
+	// Callback function to filter the MCE settings
+	function add_tinyMCE_formats( $init_array ) {  
+ 		$style_formats = array(  
+ 			array(  
+ 				'title' => 'errorBox',  
+				'selector' => 'p,div',  
+				'block' => 'p',
+				'selector' => 'p',
+ 				'classes' => 'errorBox',
+ 				'wrapper' => true,
+ 			),
+			array(
+			'title' => 'infoBox',
+				'block' => 'p',
+				'selector' => 'p',
+				'classes' => 'infoBox',
+				'wrapper' => true,
+			),
+			array(  
+				'title' => 'successBox',  
+				'block' => 'p',
+				'selector' => 'p',
+				'classes' => 'successBox',
+				'wrapper' => true,
+			),
+			array(  
+				'title' => 'warningBox',  
+				'block' => 'p',
+				'selector' => 'p',
+				'classes' => 'warningBox',
+				'wrapper' => true,
+			),		);  
+		$init_array['style_formats'] = json_encode( $style_formats );
+		return $init_array;  
+	} 
+	// Attach callback to 'tiny_mce_before_init' 
+	add_filter( 'tiny_mce_before_init', 'add_tinyMCE_formats' ); 
+	
+	
 	
 	//add_action('wp_head', 'show_template');
 

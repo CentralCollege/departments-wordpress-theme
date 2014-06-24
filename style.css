@@ -80,14 +80,52 @@ p {
 body {
 	background-image: url(images/graystripes2.png);
 }
-a {
-	text-decoration: none;
-}
+
 strong {
 	font-weight:bold;
 }
 em {
 	font-style: italic;
+}
+
+/*---------------------------------------------------*/
+/* Alert Boxes */
+/*---------------------------------------------------*/
+.infoBox{
+	background-image:url("//img.centralcollege.info/icons/information.png");
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #006699; 
+	background-color:#def4fe; 
+	padding: 5px 5px 5px 25px;
+	margin: 5px;
+}
+.successBox{
+	background-image:url("//img.centralcollege.info/icons/accept.png");
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #669900; 
+	background-color: #dff2bf; 
+	padding: 5px 5px 5px 25px;
+	margin: 5px;
+}
+.warningBox{
+	background-image:url("//img.centralcollege.info/icons/error.png");
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #FFCC00; 
+	background-color: #FFFFCC; 
+	padding: 5px 5px 5px 25px; 
+	margin: 5px;
+}
+.errorBox{
+	background-image:url("//img.centralcollege.info/icons/exclamation.png");
+	background-repeat:no-repeat;
+     background-position: 5px 5px;
+	border: 1px solid #CC0000; 
+	background-color: #FFCCCC; 
+	padding: 5px 5px 5px 25px; 
+	margin: 5px;
 }
 /*---------------------------------------------------*/
 /* My styles */
@@ -98,6 +136,69 @@ em {
 	width: 90%;
 	background-color: #fff;
 	box-shadow: 0 0 10px #000000;
+}
+
+/* ------------------ Global Classes for styling elements  -------------------- */
+table, td, th{
+	margin: 5px;
+	padding: 5px;
+}
+td{
+	line-height: 1.2em;
+}
+/* BaseTable styles */
+table.tableBase{
+	width: 80%;
+	margin: 0 auto;	
+}
+.centerTable{
+	margin: 0 auto;
+    width: 80%;
+}
+
+/*For IE*/
+.tableTextAlignLeft td{
+	text-align:left;
+}
+
+/* Table that boxes in the contents */
+.tableBox th{
+	font-weight:bold;
+	background-color: #990000;
+	color: #fff;
+	border:1px solid #990000;
+}
+.tableBox td{
+	border: 1px solid #ccc;
+}
+
+/* Table with line dividers */
+.tableBorder th{
+	font-weight:bold;
+	color:#cb2026;
+	border-bottom:1px solid #cb2026
+}
+.tableBorder td{
+	border-bottom: 1px solid #ccc;
+}
+
+/* Table with hover effect */
+table.tableHover{
+	width: 80%;
+	margin: 0 auto;	
+}
+.tableHover th{
+	font-weight:bold;
+	color:#cb2026;
+	border-bottom:1px solid #cb2026;
+	text-align: left;
+}
+.tableHover td{
+	border-bottom: 1px solid #ccc;
+}
+.tableHover tr:hover td{
+	background-color: #ffff99;
+	cursor: default;
 }
 /* Top menu navigation */
 /*---------------------------------------------------*/
@@ -219,6 +320,9 @@ em {
 	float:left;
 	/*display: none;*/
 }
+.logoLink a {
+	text-decoration: none;
+}
 .logoGroup{
 	text-align: center;
 	background-color: #fff;
@@ -284,6 +388,9 @@ a.read-more {
 	width: 65%;
 	float: left;
 }
+.postsCustom {
+	width: 100%;
+}
 .post-content {
 	padding: 1%;
 }
@@ -296,8 +403,12 @@ a.read-more {
     font-size: 2.5em;
 }
 .post-content a {
-	text-decoration: none;
 	color: #990000;
+	text-decoration: none;
+	border-bottom: 1px dotted #990000;
+}
+.post-content a:hover {
+	border-bottom: none;
 }
 .post-content h3 {
 	color: #990000;
@@ -344,6 +455,7 @@ a.read-more {
 	padding: 2%;
 	background-color: #efefef;
 	text-align: center;
+	margin: 0 auto;
 }
 #copyright {
     margin-top: 1.5em;
@@ -405,6 +517,7 @@ a.read-more {
 	border-top: 1px dotted #ccc;
 	border-bottom: 1px dotted #ccc;	
 	background-color: #efefef;
+	margin: 0 auto;
 }
 #footer-widgets .widget{
 	width: 30%;
@@ -466,6 +579,12 @@ span.says {
 	position: inherit;
 	width: 100%;
 }
+.logoGroupNoImage {
+	position: inherit;
+	width: 100%;
+	margin-bottom: 0%;
+	border-radius: 0px 0px 0px 0px;
+}
 .top-menu {
 	display: none;
 }
@@ -479,7 +598,6 @@ span.says {
 	width: 100%;
 }
 .post-content img {
-	width: 50%;
 	height: 50%;
 }
 #wrapper {
@@ -491,5 +609,12 @@ span.says {
 }
 .post-entry {
 	padding: 3%;
+}
+#footer-widgets .widget {
+	width: 100%;
+	border-bottom: 1px dotted #ccc;
+}
+#footer-widgets {
+	border: none;
 }
 }
