@@ -184,6 +184,61 @@
 		}
 		if (isset($_POST['directory_url']) ) {
 			update_option('directory_url', $_POST['directory_url']);
+				if(get_page_by_path('department-directory') == NULL){
+					// Get current user's ID
+					$user_ID = get_current_user_id();
+					// Query the API to get directory information
+					$xml = simplexml_load_file(get_option('directory_url'));
+					$directoryOutput = "";
+					foreach($xml->employee as $emp){
+						$directoryOutput = $directoryOutput . "<div class='staffListing' style='border-bottom: 1px solid #ccc; min-height: 200px;'>";
+						if ($emp->hasPhoto == "yes"){
+							$directoryOutput = $directoryOutput . "<img src='http://www.central.edu/humanresources/photodirectory/images/" . $emp->username . ".jpg' alt='" . $emp->firstName . " " . $emp->lastName. "' style='float:right; padding: 1px; margin: 1px; border: 1px solid #ccc;'/>";
+						}
+						$directoryOutput = $directoryOutput . "<h4>" . $emp->firstName . " " . $emp->lastName. "</h4>";
+						$directoryOutput = $directoryOutput . "<p>" . $emp->title . "<br />";
+						$directoryOutput = $directoryOutput . "<strong>Office:</strong> " . $emp->officeLocation . "<br />";
+						$directoryOutput = $directoryOutput . "<strong>Phone:</strong> " . $emp->phoneNumber . "<br />";
+						$directoryOutput = $directoryOutput . "<strong>Email:</strong> <a href='mailto:" . $emp->email . "'>" . $emp->email . "</a></p>";
+						$directoryOutput = $directoryOutput . "</div>";
+					}
+						//Create new directory page
+						$add_directory_to_site = array(
+							'post_title'	=> 'Department Directory',
+							'post_content'	=> $directoryOutput,
+							'post_name'	=> 'department-directory',
+							'post_status'	=> 'draft',
+							'post_type'	=> 'page',
+							'post_author'	=> $user_ID,
+							'ping_status'	=> 'closed'
+						);	
+						wp_insert_post($add_directory_to_site);
+				} else {				
+						//Get page ID
+						$page = get_page_by_path('department-directory');	
+						
+						//Get directory info
+						$xml = simplexml_load_file(get_option('directory_url'));
+						$directoryOutput = "";
+						foreach($xml->employee as $emp){
+							$directoryOutput = $directoryOutput . "<div class='staffListing' style='border-bottom: 1px solid #ccc; min-height: 200px;'>";
+							if ($emp->hasPhoto == "yes"){
+								$directoryOutput = $directoryOutput . "<img src='http://www.central.edu/humanresources/photodirectory/images/" . $emp->username . ".jpg' alt='" . $emp->firstName . " " . $emp->lastName. "' style='float:right; padding: 1px; margin: 1px; border: 1px solid #ccc;'/>";
+							}
+							$directoryOutput = $directoryOutput . "<h4>" . $emp->firstName . " " . $emp->lastName. "</h4>";
+							$directoryOutput = $directoryOutput . "<p>" . $emp->title . "<br />";
+							$directoryOutput = $directoryOutput . "<strong>Office:</strong> " . $emp->officeLocation . "<br />";
+							$directoryOutput = $directoryOutput . "<strong>Phone:</strong> " . $emp->phoneNumber . "<br />";
+							$directoryOutput = $directoryOutput . "<strong>Email:</strong> <a href='mailto:" . $emp->email . "'>" . $emp->email . "</a></p>";
+							$directoryOutput = $directoryOutput . "</div>";
+						}
+						
+						$update_directory_page = array(
+							'ID' => $page->ID,
+							'post_content'	=> $directoryOutput
+						);
+						wp_update_post($update_directory_page);
+				}
 		}  	
     ?>
 		<div class="wrapper">
@@ -227,18 +282,26 @@
             <form name="form3" method="post" action="">
             	<table class="form-table">
                     <tbody>
-                        <tr>
+                      <?php if (current_user_can('edit_themes') ) { ?>
+                         <tr>
                             <th align="right">
             					<label for="directory_url">Directory listing url: </label>
                             </th>
-                            <td>
-                            	<input type="text" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" >
+                            <td>    
+                            		<input type="text" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" size="80" >
                             </td>
                         </tr>
                         <tr>
                         	<td colspan="2">
                         		<input id="submit" class="button button-primary" type="submit" value="Update URL" name="submit">
                             </td>
+                      <?php } else { ?>
+                        <tr>
+                        	<td colspan="2">
+                            	<input type="hidden" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" >
+                            	<input id="submit" class="button button-primary" type="submit" value="Update Directory" name="submit">
+                            </td>
+                      <?php } ?>
                         </tr>
                     </tbody>
                 </table>
@@ -248,33 +311,8 @@
 	}
 	?>
     <?php
-		// Get current user's ID
-		/*$user_ID = get_current_user_id();
 		
-		$xml = simplexml_load_file(get_option('directory_url'));
-		$directoryOutput = "";
-		foreach($xml->employee as $emp){
-			$directoryOutput = $directoryOutput . "<div class='staffListing' style='border-bottom: 1px solid #ccc; min-height: 200px;'>";
-			if ($emp->hasPhoto == "yes"){
-				$directoryOutput = $directoryOutput . "<img src='http://www.central.edu/humanresources/photodirectory/images/" . $emp->username . ".jpg' alt='" . $emp->firstName . " " . $emp->lastName. "' style='float:right; padding: 1px; margin: 1px; border: 1px solid #ccc;'/>";
-			}
-			$directoryOutput = $directoryOutput . "<h4>" . $emp->firstName . " " . $emp->lastName. "</h4>";
-			$directoryOutput = $directoryOutput . "<p>" . $emp->title . "<br />";
-			$directoryOutput = $directoryOutput . "<strong>Office:</strong> " . $emp->officeLocation . "<br />";
-			$directoryOutput = $directoryOutput . "<strong>Phone:</strong> " . $emp->phoneNumber . "<br />";
-			$directoryOutput = $directoryOutput . "<strong>Email:</strong> <a href='mailto:" . $emp->email . "'>" . $emp->email . "</a></p>";
-			$directoryOutput = $directoryOutput . "</div>";
-		}
-			$add_directory_to_site = array(
-				'post_title'	=> 'Department Directory',
-				'post_content'	=> $directoryOutput,
-				'post_name'	=> 'department-directory',
-				'post_status'	=> 'draft',
-				'post_type'	=> 'page',
-				'post_author'	=> $user_ID,
-				'ping_status'	=> 'closed'
-			);	
-			wp_insert_post($add_directory_to_site);*/
+		
 	
 	// Add custom tinyMCE stylesheet
 	function add_editor_styles() {
