@@ -248,8 +248,10 @@
 	}
 	?>
     <?php
-	
-		$xml = simplexml_load_file('directory_url');
+		// Get current user's ID
+		/*$user_ID = get_current_user_id();
+		
+		$xml = simplexml_load_file(get_option('directory_url'));
 		$directoryOutput = "";
 		foreach($xml->employee as $emp){
 			$directoryOutput = $directoryOutput . "<div class='staffListing' style='border-bottom: 1px solid #ccc; min-height: 200px;'>";
@@ -272,7 +274,7 @@
 				'post_author'	=> $user_ID,
 				'ping_status'	=> 'closed'
 			);	
-			wp_insert_post($add_directory_to_site);
+			wp_insert_post($add_directory_to_site);*/
 	
 	// Add custom tinyMCE stylesheet
 	function add_editor_styles() {
