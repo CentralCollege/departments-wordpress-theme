@@ -29,5 +29,13 @@
     </div>
 </div>
     <?php wp_footer(); ?>
+<script>
+    jQuery("#hamburger").click(function() {
+    });
+ 
+    //close the menu
+    jQuery("#contentLayer").click(function() {
+    });
+</script>
 	</body>
 </html>
