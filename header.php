@@ -2,9 +2,7 @@
 <html>
 	<head>
     	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-    	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    	<script src="js/hamburger.js"></script>
     	<title><?php wp_title( '-', true, 'right' ); ?> <?php bloginfo('name'); ?></title>
         <link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />

@@ -29,13 +29,18 @@
     </div>
 </div>
     <?php wp_footer(); ?>
-<script>
-    jQuery("#hamburger").click(function() {
-    });
- 
-    //close the menu
-    jQuery("#contentLayer").click(function() {
-    });
-</script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>
+        $(document).ready(function(){
+            //Open the menu
+            $('#hamburger').click(function() {
+                alert("Hello World");		
+            });
+            //Close the menu
+            $("#contentLayer").click(function() {
+                alert("Hello World");		
+            });
+        });
+    </script>
 	</body>
 </html>
