@@ -79,6 +79,7 @@ p {
 }
 body {
 	background-image: url(images/graystripes2.png);
+	overflow-x:hidden;
 }
 
 strong {
@@ -702,5 +703,30 @@ Style the navigation menu
 .top-menu li a {
     color: #fff;
     text-decoration: none;
+}
+#content {
+    background-color: #FFFFFF;
+    padding: 52px 10px 10px 10px;
+    position: relative;
+    width: auto;
+    min-height: 1000px;
+    -webkit-box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+}
+/*
+The Layer that will be layed over the content
+so that the content is unclickable while menu is shown
+*/
+#contentLayer {
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+    z-index: 5;
+    min-height: 1062px;
 }
 }

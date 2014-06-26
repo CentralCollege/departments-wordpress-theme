@@ -14,6 +14,8 @@
                     <div></div>
                     <div></div>
                 </div> 
+        <div id="contentLayer"></div>
+        <div id="content">
 		<?php if (!is_front_page() && get_option('active_banner_photo') == 'no') { 
 			
 		?> 
@@ -41,10 +43,9 @@
       
         <div id="wrapper">
             <div id="header">
-
                 	 <?php
 						if ( has_nav_menu( 'header-menu' ) ) {
                     		wp_nav_menu( array( 'menu' => 'header-menu', 'menu_class' => 'top-menu',) ); 
 						} ?>
             </div>
-            <div id="content"></div>
+            
