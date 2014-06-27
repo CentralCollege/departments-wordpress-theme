@@ -15,7 +15,6 @@
                     <div></div>
                 </div> 
         <div id="contentLayer"></div>
-        <div id="content">
 		<?php if (!is_front_page() && get_option('active_banner_photo') == 'no') { 
 			
 		?> 
