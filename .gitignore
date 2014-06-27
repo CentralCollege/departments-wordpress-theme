@@ -39,6 +39,4 @@ Thumbs.db
 # Project Specific #
 ######################
 node_modules
-gruntfile.js
-package.json
 secret.json
