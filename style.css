@@ -79,7 +79,6 @@ p {
 }
 body {
 	background-image: url(images/graystripes2.png);
-	overflow-x:hidden;
 }
 
 strong {
@@ -204,55 +203,6 @@ table.tableHover{
 /* Top menu navigation */
 /*---------------------------------------------------*/
 
-.top-menu ul ul {
-	display: block;
-	position: absolute;
-	left: 100%;
-	top: 0;
-}
-.top-menu ul {
-	display: none;
-	background: #990000;
-	position: absolute;
-	top: 100%;
-}
-.top-menu ul li {
-	float: none;
-	position: relative;
-	background-color: #efefef;
-}
-.top-menu ul li a:hover {
-	background: #990000;
-	color: #fff;
-}
-.top-menu li{
-	float:left;
-}
-.top-menu li:hover a {
-	color:#990000;
-	background: #efefef;
-}
-.top-menu li a {
-	display: block;
-	padding: 1em 1.5em;
-	color: #efefef;
-	text-decoration: none;
-}
-.top-menu li:hover > ul {
-	display: block;
-}
-.top-menu {
-	background: #990000;
-	list-style: none;
-	position: relative;
-	display: inline-block;	
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
-.top-menu:after {
-	content: "";
-	clear: both;
-	display: block;
-}
 
 /* Sidebar */
 /*---------------------------------------------------*/
@@ -668,7 +618,6 @@ The navigation container in the background
     z-index: 9;
     width: 70%;
     height: 100%;
-	display: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -704,30 +653,5 @@ Style the navigation menu
 .top-menu li a {
     color: #fff;
     text-decoration: none;
-}
-#content {
-    background-color: #FFFFFF;
-    padding: 52px 10px 10px 10px;
-    position: relative;
-    width: auto;
-    min-height: 1000px;
-    -webkit-box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
-}
-/*
-The Layer that will be layed over the content
-so that the content is unclickable while menu is shown
-*/
-#contentLayer {
-    display: none;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 30%;
-    z-index: 5;
-    min-height: 1062px;
 }
 }
