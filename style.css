@@ -202,7 +202,52 @@ table.tableHover{
 }
 /* Top menu navigation */
 /*---------------------------------------------------*/
-
+#cui_menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1.1em
+}
+#cui_menu ul li {
+	display: block;
+	position: relative;
+	float: left;
+	border-right: 1px solid #cb2026;
+}
+#cui_menu ul li:last-child {
+	border-right: none;
+}
+#cui_menu li ul {
+	display: none;
+}
+#cui_menu ul li a {
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+	padding: 5px 15px 5px 15px;
+	background: #990000;
+	white-space: nowrap;
+	font-size: 1.4em;
+}
+#cui_menu ul li a:hover {
+	background: #cb2026;
+}
+#cui_menu li:hover ul {
+	display: block;
+	position: absolute;
+}
+#cui_menu li:hover li {
+	float: none;
+}
+#cui_menu li:hover a {
+	background: #ccc;
+}
+#cui_menu li:hover li a:hover {
+	background: #333;
+}
+#cui_menu ul li ul li{
+	font-size: .5em;
+}
 
 /* Sidebar */
 /*---------------------------------------------------*/
@@ -565,93 +610,26 @@ span.says {
 #footer-widgets {
 	border: none;
 }
-/*
-Hamburger menu styles
-*/
-header {
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
-body {
-    overflow-x:hidden;
-}
-/*
-the hamburger button with a little gradient effect
-*/
-#hamburger {
-    border: 1px solid #374C77;
-    border-radius: 3px 3px 3px 3px;
-    cursor: pointer;
-    display: block;
-    height: 24px;
-    padding: 3px 4px 3px;
-    position: relative;
-    width: 25px;
-    background: #4569b2;
-	z-index: 10;
-	float: left;
-    background: -moz-linear-gradient(top,  #990000 0%, #990000 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#990000), color-stop(100%,#990000));
-    background: -webkit-linear-gradient(top,  #990000 0%, #990000 100%);
-    background: -o-linear-gradient(top,  #990000 0%,#990000 100%);
-    background: -ms-linear-gradient(top,  #990000 0%,#990000 100%);
-    background: linear-gradient(to bottom,  #990000 0%,#990000 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990000', endColorstr='#990000',GradientType=0 );
-}
-#hamburger div {
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 2px 2px 2px 2px;
-    height: 2px;
-    margin-top: 3px;
-    width: 90%;
+.coverImage img {
+	float: none;
 }
 
 /*
-The navigation container in the background
+Top-menu nav
 */
-.top-menu {
-    left: 0px;
-    top: 0px;
-    position: fixed;
-    z-index: 9;
-    width: 70%;
-    height: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow-x:hidden;
-    overflow-y:auto ;
-    background: #3e3c3d;
-    background: -moz-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e3c3d), color-stop(100%,#2d2c2d));
-    background: -webkit-linear-gradient(top, #3e3c3d 0%,#2d2c2d 100%);
-    background: -o-linear-gradient(top, #3e3c3d 0%,#2d2c2d 100%);
-    background: -ms-linear-gradient(top, #3e3c3d 0%,#2d2c2d 100%);
-    background: linear-gradient(to bottom, #3e3c3d 0%,#2d2c2d 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3c3d', endColorstr='#2d2c2d',GradientType=0 );
+#cui_menu ul li {
+	float: none;
+	display: block;	
+	color: #fff;
+	border-bottom: 1px solid #fff;
 }
-/*
-Style the navigation menu
-*/
-.top-menu ul {
-    list-style: none;
-    margin: 0;
-    width: 100%;
-    padding: 0;
+#cui_menu ul li a {
+	background: none;
+	color: #fff;
+	padding: none;
+	white-space:normal;
 }
-
-.top-menu li {
-    position: relative;
-    font-size: 1em;
-    font-weight: bold;
-    border-bottom: 1px solid #222222;
-    border-top: 1px solid #444444;
-    padding: 15px;
-}
-.top-menu li a {
-    color: #fff;
-    text-decoration: none;
-}
+#cui_menu ul li ul li{
+	display: none;
+}	
 }

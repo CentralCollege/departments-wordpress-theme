@@ -371,15 +371,7 @@
 		return $init_array;  
 	} 
 	// Attach callback to 'tiny_mce_before_init' 
-	add_filter( 'tiny_mce_before_init', 'add_tinyMCE_formats' );
-	
-	// Add additional javascripts for this theme
-	function theme_name_scripts() {
-		wp_enqueue_script( 'hamburger', get_template_directory_uri() . '/js/hamburger.js');
-		wp_enqueue_script('jquery');
-	}	
-	add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );	
-	
+	add_filter( 'tiny_mce_before_init', 'add_tinyMCE_formats' );	
 	
 	//add_action('wp_head', 'show_template');
 
