@@ -37,7 +37,6 @@
 		unregister_widget('WP_Widget_Categories');
 		unregister_widget('WP_Widget_Recent_Posts');
 		unregister_widget('WP_Widget_Recent_Comments');
-		unregister_widget('WP_Widget_RSS');
 		unregister_widget('WP_Widget_Tag_Cloud');
 	}
 	add_action('widgets_init', 'unregister_default_wp_widgets', 1);
