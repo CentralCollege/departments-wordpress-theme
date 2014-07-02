@@ -6,7 +6,7 @@
 		sftp: {
 		  test: {
 			files: {
-			  "./": "*.php"
+			  "./": ["custom-editor-style.css", "footer.php", "full-width-page.php", "functions.php", "header.php", "index.php", "page.php", "sidebar.php", "single.php", "style.css"]
 			},
 			options: {
 			  path: '<%= secret.path %>',
