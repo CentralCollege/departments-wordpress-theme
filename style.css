@@ -257,6 +257,10 @@ table.tableHover{
 /*---------------------------------------------------*/
 /* Breadcrumb */
 /*---------------------------------------------------*/
+#breadcrumb {
+	color: #999;
+	padding: .5em;
+}
 #breadcrumb a {
 	color: #999;
 	padding: .35em;
@@ -264,7 +268,6 @@ table.tableHover{
 }
 #breadcrumb a:hover {
 	color: #990000;
-	border-bottom: 1px thin #990000;
 }
 #breadcrumb .active_breadcrumb {
 	padding: .35em;
