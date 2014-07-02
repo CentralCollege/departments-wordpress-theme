@@ -59,4 +59,9 @@
                 </div>
                 <div class="clearboth"></div>
             </div>
+            <?php
+				if (function_exists('central_breadcrumbs')){
+					?><div id="breadcrumb"><?php central_breadcrumbs(); ?></div><?php
+				}
+			?>
             <div id="content"></div>

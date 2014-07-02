@@ -373,6 +373,48 @@
 	// Attach callback to 'tiny_mce_before_init' 
 	add_filter( 'tiny_mce_before_init', 'add_tinyMCE_formats' );	
 	
+	// ----------------------------------------------------------------
+	// Add breadcrumb functionality
+	// ----------------------------------------------------------------
+	function central_breadcrumbs() {
+		$delimiter = '|';
+		$name = 'Home'; //text for the 'Home' link
+		$currentBefore = '<span class="active_breadcrumb">';
+		$currentAfter = '</span>';
+		
+		if ( !is_home() && !is_front_page() || is_paged() ) {
+			global $post;
+			$home = get_bloginfo('url');
+			echo '<a href="' . $home . '">' . $name . '</a> ' . $delimiter . ' ';	
+			
+			if ( is_single() ) {
+			  $cat = get_the_category(); $cat = $cat[0];
+			  echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+			  echo $currentBefore;
+			  the_title();
+			  echo $currentAfter;
+			}
+			elseif ( is_page() && !$post->post_parent ) {
+			  echo $currentBefore;
+			  the_title();
+			  echo $currentAfter;
+			} 
+			elseif ( is_page() && $post->post_parent ) {
+			  $parent_id  = $post->post_parent;
+			  $breadcrumbs = array();
+			  while ($parent_id) {
+				$page = get_page($parent_id);
+				$breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
+				$parent_id  = $page->post_parent;
+			  }
+			$breadcrumbs = array_reverse($breadcrumbs);
+			foreach ($breadcrumbs as $crumb) echo $crumb . ' ' . $delimiter . ' ';
+			echo $currentBefore;
+			the_title();
+			echo $currentAfter;
+			}
+		}
+	}
 	
 	//add_action('wp_head', 'show_template');
 
