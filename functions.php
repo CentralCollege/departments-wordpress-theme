@@ -65,6 +65,7 @@
 	// ----------------------------------------------------------------
 	$role = get_role('editor');
 		$role->add_cap('edit_theme_options');
+	
 	// ----------------------------------------------------------------
 	// Only keep the last 5 revisions of any page.
 	// ----------------------------------------------------------------
@@ -371,6 +372,7 @@
 	} 
 	// Attach callback to 'tiny_mce_before_init' 
 	add_filter( 'tiny_mce_before_init', 'add_tinyMCE_formats' );	
+	
 	
 	//add_action('wp_head', 'show_template');
 
