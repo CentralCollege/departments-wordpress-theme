@@ -202,6 +202,9 @@ table.tableHover{
 }
 /* Top menu navigation */
 /*---------------------------------------------------*/
+#cui_menu{
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+}
 #cui_menu ul {
 	margin: 0;
 	padding: 0;
@@ -245,8 +248,11 @@ table.tableHover{
 #cui_menu li:hover li a:hover {
 	background: #333;
 }
+#cui_menu li:hover li{
+	border-right: none;
+}
 #cui_menu ul li ul li{
-	font-size: .5em;
+	font-size: .65em;
 }
 
 /* Sidebar */
