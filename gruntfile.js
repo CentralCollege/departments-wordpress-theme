@@ -21,7 +21,7 @@
 		//Watch folders		
 		watch: {
 			php:{
-				files:'*.php',
+				files: ['*.php', '*.css'],
 				tasks:['sftp'],
 				options:{
 					spawn: false,
