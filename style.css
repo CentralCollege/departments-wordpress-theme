@@ -254,6 +254,21 @@ table.tableHover{
 #cui_menu ul li ul li{
 	font-size: .65em;
 }
+/*---------------------------------------------------*/
+/* Breadcrumb */
+/*---------------------------------------------------*/
+#breadcrumb a {
+	color: #999;
+	padding: .35em;
+	text-decoration: none;
+}
+#breadcrumb a:hover {
+	color: #990000;
+	border-bottom: 1px thin #990000;
+}
+#breadcrumb .active_breadcrumb {
+	padding: .35em;
+}
 
 /* Sidebar */
 /*---------------------------------------------------*/

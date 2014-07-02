@@ -377,7 +377,7 @@
 	// Add breadcrumb functionality
 	// ----------------------------------------------------------------
 	function central_breadcrumbs() {
-		$delimiter = '|';
+		$delimiter = '/';
 		$name = 'Home'; //text for the 'Home' link
 		$currentBefore = '<span class="active_breadcrumb">';
 		$currentAfter = '</span>';
