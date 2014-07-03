@@ -1,12 +1,13 @@
 <!doctype html>
 <html>
 	<head>
+    	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
     	<title><?php wp_title( '-', true, 'right' ); ?> <?php bloginfo('name'); ?></title>
         <link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
     	<?php wp_head(); ?>
     </head>
-    <body>
+    <body> 
 		<?php if (!is_front_page() && get_option('active_banner_photo') == 'no') { 
 			
 		?> 
@@ -34,10 +35,23 @@
       
         <div id="wrapper">
             <div id="header">
-                <div class="headbar">
-                	 <?php
+				<div id="cui_menu">
+                    <ul id="menu">
+                    	<?php
 						if ( has_nav_menu( 'header-menu' ) ) {
-                    		wp_nav_menu( array( 'menu' => 'header-menu', 'menu_class' => 'top-menu',) ); 
+
+                    		wp_nav_menu( array( 'menu' => 'header-menu', 'menu_class' => 'menu', ) ); 
+
 						} ?>
+                </ul>
                 </div>
+                <div class="clearboth"></div>
             </div>
+            <?php if (get_option('active_breadcrumb') == 'yes') { ?>
+				<?php
+                    if (function_exists('central_breadcrumbs')){
+                        ?><div id="breadcrumb"><?php central_breadcrumbs(); ?></div><?php
+                    }
+                ?>
+            <?php } ?>
+            <div id="content"></div>

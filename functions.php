@@ -37,7 +37,6 @@
 		unregister_widget('WP_Widget_Categories');
 		unregister_widget('WP_Widget_Recent_Posts');
 		unregister_widget('WP_Widget_Recent_Comments');
-		unregister_widget('WP_Widget_RSS');
 		unregister_widget('WP_Widget_Tag_Cloud');
 	}
 	add_action('widgets_init', 'unregister_default_wp_widgets', 1);
@@ -66,6 +65,7 @@
 	// ----------------------------------------------------------------
 	$role = get_role('editor');
 		$role->add_cap('edit_theme_options');
+	
 	// ----------------------------------------------------------------
 	// Only keep the last 5 revisions of any page.
 	// ----------------------------------------------------------------
@@ -182,6 +182,9 @@
 		if (isset($_POST['active_side_nav']) ) {
 			update_option('active_side_nav', $_POST['active_side_nav']);
 		}
+		if (isset($_POST['active_breadcrumb']) ) {
+			update_option('active_breadcrumb', $_POST['active_breadcrumb']);
+		}
 		if (isset($_POST['directory_url']) ) {
 			update_option('directory_url', $_POST['directory_url']);
 				if(get_page_by_path('department-directory') == NULL){
@@ -272,6 +275,19 @@
                             <td>
                               <select id="active_side_nav" name="active_side_nav">
                                 	<option value="<?php echo get_option('active_side_nav')?>" selected="selected"><?php echo get_option('active_side_nav')?></option>
+                                    <option value="-----------" disabled="disabled">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th align="right">
+           					  <label for="active_breadcrumb">Breadcrumb nav on all pages: </label>
+                            </th>
+                            <td>
+                              <select id="active_breadcrumb" name="active_breadcrumb">
+                                	<option value="<?php echo get_option('active_breadcrumb')?>" selected="selected"><?php echo get_option('active_breadcrumb')?></option>
                                     <option value="-----------" disabled="disabled">
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -371,9 +387,50 @@
 		return $init_array;  
 	} 
 	// Attach callback to 'tiny_mce_before_init' 
-	add_filter( 'tiny_mce_before_init', 'add_tinyMCE_formats' ); 
+	add_filter( 'tiny_mce_before_init', 'add_tinyMCE_formats' );	
 	
-	
+	// ----------------------------------------------------------------
+	// Add breadcrumb functionality
+	// ----------------------------------------------------------------
+	function central_breadcrumbs() {
+		$delimiter = '/';
+		$name = 'Home'; //text for the 'Home' link
+		$currentBefore = '<span class="active_breadcrumb">';
+		$currentAfter = '</span>';
+		
+		if ( !is_home() && !is_front_page() || is_paged() ) {
+			global $post;
+			$home = get_bloginfo('url');
+			echo '<a href="' . $home . '">' . $name . '</a> ' . $delimiter . ' ';	
+			
+			if ( is_single() ) {
+			  $cat = get_the_category(); $cat = $cat[0];
+			  echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+			  echo $currentBefore;
+			  the_title();
+			  echo $currentAfter;
+			}
+			elseif ( is_page() && !$post->post_parent ) {
+			  echo $currentBefore;
+			  the_title();
+			  echo $currentAfter;
+			} 
+			elseif ( is_page() && $post->post_parent ) {
+			  $parent_id  = $post->post_parent;
+			  $breadcrumbs = array();
+			  while ($parent_id) {
+				$page = get_page($parent_id);
+				$breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
+				$parent_id  = $page->post_parent;
+			  }
+			$breadcrumbs = array_reverse($breadcrumbs);
+			foreach ($breadcrumbs as $crumb) echo $crumb . ' ' . $delimiter . ' ';
+			echo $currentBefore;
+			the_title();
+			echo $currentAfter;
+			}
+		}
+	}
 	
 	//add_action('wp_head', 'show_template');
 

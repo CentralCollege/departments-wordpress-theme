@@ -202,55 +202,75 @@ table.tableHover{
 }
 /* Top menu navigation */
 /*---------------------------------------------------*/
-
-.top-menu ul ul {
+#cui_menu{
+	font-family: 'ZurichBT-RomanCondensed',arial,serif;
+}
+#cui_menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1.1em
+}
+#cui_menu ul li {
 	display: block;
-	position: absolute;
-	left: 100%;
-	top: 0;
-}
-.top-menu ul {
-	display: none;
-	background: #990000;
-	position: absolute;
-	top: 100%;
-}
-.top-menu ul li {
-	float: none;
 	position: relative;
-	background-color: #efefef;
+	float: left;
+	border-right: 1px solid #cb2026;
 }
-.top-menu ul li a:hover {
-	background: #990000;
-	color: #fff;
+#cui_menu ul li:last-child {
+	border-right: none;
 }
-.top-menu li{
-	float:left;
+#cui_menu li ul {
+	display: none;
 }
-.top-menu li:hover a {
-	color:#990000;
-	background: #efefef;
-}
-.top-menu li a {
+#cui_menu ul li a {
 	display: block;
-	padding: 1em 1.5em;
-	color: #efefef;
+	text-decoration: none;
+	color: #ffffff;
+	padding: 5px 15px 5px 15px;
+	background: #990000;
+	white-space: nowrap;
+	font-size: 1em;
+}
+#cui_menu ul li a:hover {
+	background: #cb2026;
+}
+#cui_menu li:hover ul {
+	display: block;
+	position: absolute;
+}
+#cui_menu li:hover li {
+	float: none;
+}
+#cui_menu li:hover a {
+	background: #ccc;
+}
+#cui_menu li:hover li a:hover {
+	background: #333;
+}
+#cui_menu li:hover li{
+	border-right: none;
+}
+#cui_menu ul li ul li{
+	font-size: .65em;
+}
+/*---------------------------------------------------*/
+/* Breadcrumb */
+/*---------------------------------------------------*/
+#breadcrumb {
+	color: #999;
+	padding: .5em;
+}
+#breadcrumb a {
+	color: #999;
+	padding: .35em;
 	text-decoration: none;
 }
-.top-menu li:hover > ul {
-	display: block;
+#breadcrumb a:hover {
+	color: #990000;
 }
-.top-menu {
-	background: #990000;
-	list-style: none;
-	position: relative;
-	display: inline-block;	
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
-.top-menu:after {
-	content: "";
-	clear: both;
-	display: block;
+#breadcrumb .active_breadcrumb {
+	padding: .35em;
 }
 
 /* Sidebar */
@@ -585,9 +605,6 @@ span.says {
 	margin-bottom: 0%;
 	border-radius: 0px 0px 0px 0px;
 }
-.top-menu {
-	display: none;
-}
 .Rightsidebar {
 	width: 100%;
 }
@@ -617,4 +634,26 @@ span.says {
 #footer-widgets {
 	border: none;
 }
+.coverImage img {
+	float: none;
+}
+
+/*
+Top-menu nav
+*/
+#cui_menu ul li {
+	float: none;
+	display: block;	
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+#cui_menu ul li a {
+	background: none;
+	color: #fff;
+	padding: none;
+	white-space:normal;
+}
+#cui_menu ul li ul li{
+	display: none;
+}	
 }
