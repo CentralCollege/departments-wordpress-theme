@@ -182,6 +182,9 @@
 		if (isset($_POST['active_side_nav']) ) {
 			update_option('active_side_nav', $_POST['active_side_nav']);
 		}
+		if (isset($_POST['active_breadcrumb']) ) {
+			update_option('active_breadcrumb', $_POST['active_breadcrumb']);
+		}
 		if (isset($_POST['directory_url']) ) {
 			update_option('directory_url', $_POST['directory_url']);
 				if(get_page_by_path('department-directory') == NULL){
@@ -272,6 +275,19 @@
                             <td>
                               <select id="active_side_nav" name="active_side_nav">
                                 	<option value="<?php echo get_option('active_side_nav')?>" selected="selected"><?php echo get_option('active_side_nav')?></option>
+                                    <option value="-----------" disabled="disabled">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th align="right">
+           					  <label for="active_breadcrumb">Breadcrumb nav on all pages: </label>
+                            </th>
+                            <td>
+                              <select id="active_breadcrumb" name="active_breadcrumb">
+                                	<option value="<?php echo get_option('active_breadcrumb')?>" selected="selected"><?php echo get_option('active_breadcrumb')?></option>
                                     <option value="-----------" disabled="disabled">
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
