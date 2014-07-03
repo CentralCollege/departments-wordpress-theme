@@ -230,7 +230,7 @@ table.tableHover{
 	padding: 5px 15px 5px 15px;
 	background: #990000;
 	white-space: nowrap;
-	font-size: 1.4em;
+	font-size: 1em;
 }
 #cui_menu ul li a:hover {
 	background: #cb2026;
