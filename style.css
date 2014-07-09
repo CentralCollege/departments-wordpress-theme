@@ -327,6 +327,31 @@ table.tableHover{
 	padding: .5em;
 	border-bottom: 1px dotted #cccccc;
 }
+/* RSS widget */
+/*---------------------------------------------------*/
+.widget_rss {
+	color: #990000;
+	text-decoration: none;
+}
+.widget_rss h2 a {
+	padding: .5em 0 .25em .5em;
+	color: #990000;
+	text-decoration: none;
+}
+.widget_rss ul li {
+	border-bottom: 1px dotted #ccc;
+    list-style: none outside none;
+    margin-left: 1.5em;
+    padding: 0.5em 0;
+}
+.widget_rss ul li a {
+	text-decoration: none;
+	color: #990000;
+}
+.widget_rss ul li a:hover {
+	border-bottom: 1px #990000 solid;
+}
+	
 
 /* Header */
 /*---------------------------------------------------*/

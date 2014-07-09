@@ -301,6 +301,7 @@
                 </table>
             </form> 
             <h2>Directory Settings</h2>
+            
             <form name="form3" method="post" action="">
             	<table class="form-table">
                     <tbody>
@@ -318,13 +319,25 @@
                         		<input id="submit" class="button button-primary" type="submit" value="Update URL" name="submit">
                             </td>
                       <?php } else { ?>
-                        <tr>
-                        	<td colspan="2">
-                            	<input type="hidden" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" >
-                            	<input id="submit" class="button button-primary" type="submit" value="Update Directory" name="submit">
-                            </td>
+                      		<?php if(get_page_by_path('department-directory') == TRUE){ ?>
+								<?php $page = get_page_by_path('department-directory');?>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="hidden" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" >
+                                        <a href="<?php bloginfo('url'); ?>/department-directory"><input id="view" class="button button-secondary" type="button" value="View Directory" name="view" /></a>
+                                        <a href="post.php?post=<?php echo $page->ID; ?>&action=edit"><input id="edit" class="button button-primary" type="button" value="Edit Directory" name="edit" /></a>
+                                        <input id="submit" class="button button-secondary" type="submit" value="Update Directory" name="submit">
+                                    </td>
+                                </tr>
+                            <?php } else { ?>
+                                 <tr>
+                                    <td colspan="2">
+                                        <input type="hidden" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" >
+                                        <input id="submit" class="button button-primary" type="submit" value="Update Directory" name="submit">
+                                    </td>  
+                                 </tr> 
+                            <?php } ?>         
                       <?php } ?>
-                        </tr>
                     </tbody>
                 </table>
 			</form>
