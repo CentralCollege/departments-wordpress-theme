@@ -145,6 +145,7 @@ table, td, th{
 }
 td{
 	line-height: 1.2em;
+	border: 1px #000 solid;
 }
 /* BaseTable styles */
 table.tableBase{
@@ -492,7 +493,10 @@ a.read-more {
 	margin-left: auto !important;
 	margin-right: auto !important;
 }
-
+.contentblock {
+	display: block;
+	margin-bottom: 3em;
+}
 /* Footer */
 /*---------------------------------------------------*/
 
