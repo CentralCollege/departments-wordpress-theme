@@ -444,14 +444,18 @@
 			}
 		}
 	}
-	
-	//add_action('wp_head', 'show_template');
 
-	//function show_template() {
+function add_dashboard_widgets() {
 
-	//	global $template;
+	wp_add_dashboard_widget(
+                 'rss_dashboard_widget',         // Widget slug.
+                 'Latest Template Updates',         // Title.
+                 'rss_dashboard_widget_function' // Display function.
+        );	
+}
+add_action( 'wp_dashboard_setup', 'add_dashboard_widgets' );
 
-     //   print_r($template);
-
-	//}
+function rss_dashboard_widget_function() {
+	include 'features/gitHubFeed.php';
+}
 ?>
