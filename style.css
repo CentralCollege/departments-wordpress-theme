@@ -227,7 +227,7 @@ table.tableHover{
 #cui_menu ul li a {
 	display: block;
 	text-decoration: none;
-	color: #ffffff;
+	color: #fff;
 	padding: 5px 15px 5px 15px;
 	background: #990000;
 	white-space: nowrap;
@@ -247,7 +247,8 @@ table.tableHover{
 	background: #ccc;
 }
 #cui_menu li:hover li a:hover {
-	background: #333;
+	color: #FFF;
+	background: #cb2026;
 }
 #cui_menu li:hover li{
 	border-right: none;
@@ -255,6 +256,10 @@ table.tableHover{
 #cui_menu ul li ul li{
 	font-size: .65em;
 }
+#cui_menu ul li ul li a {
+	color: #000;
+}
+
 /*---------------------------------------------------*/
 /* Breadcrumb */
 /*---------------------------------------------------*/
