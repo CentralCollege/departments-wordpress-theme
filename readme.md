@@ -14,6 +14,7 @@ Grunt Integration
 You can use the Grunt javascript task runner (http://gruntjs.com/) with this project. It currently performs the following commands:
 
 * Watches all `.php` files and uses SSH to transfer to a remote server.
+* Watches all `.css` files and minifies them.
 
 Grunt Configuration
 ------------------

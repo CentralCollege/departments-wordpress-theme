@@ -8,6 +8,7 @@
   "version": "0.0.1",
   "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-contrib-cssmin": "^0.10.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-ssh": "~0.11.2"
   }
