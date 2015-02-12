@@ -84,6 +84,16 @@
 	);
 	add_theme_support( 'custom-header', $defaults );
 	
+	// ----------------------------------------------------------------
+	// Allow users to change the background image of the site
+	// ----------------------------------------------------------------
+	$background_defaults = array(
+		'default-image' => get_template_directory_uri() . '/images/graystripes2.png',
+		'default-repeat'	=> 'repeat'
+	);
+	add_theme_support('custom-background', $background_defaults);
+	
+	
 	function add_ie_html5_shim () {
 		echo '<!--[if lt IE 9]>';
 		echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
