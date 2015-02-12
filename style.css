@@ -57,10 +57,10 @@ Fonts loaded from this server
 */
 @font-face {
 font-family: 'ZurichBT-RomanCondensed';
-src: url('/fonts/ZurichCondensed.eot'); /* IE9 Compat Modes */
-src: url('/fonts/ZurichCondensed.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-url('/fonts/ZurichCondensed.woff') format('woff'), /* Modern Browsers */
-url('/fonts/ZurichCondensed.ttf') format('truetype') /* Safari, Android, iOS */
+src: url('/wp-content/themes/departments-wordpress-theme/fonts/ZurichCondensed.eot'); /* IE9 Compat Modes */
+src: url('/wp-content/themes/departments-wordpress-theme/fonts/ZurichCondensed.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('/wp-content/themes/departments-wordpress-theme/fonts/ZurichCondensed.woff') format('woff'), /* Modern Browsers */
+url('/wp-content/themes/departments-wordpress-theme/fonts/ZurichCondensed.ttf') format('truetype') /* Safari, Android, iOS */
 }
 
 /*---------------------------------------------------*/
