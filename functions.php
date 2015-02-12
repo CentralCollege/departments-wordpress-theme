@@ -25,9 +25,8 @@
 		remove_meta_box( 'dashboard_primary', 'dashboard', 'side');
 		remove_meta_box( 'dashboard_secondary', 'dashboard', 'side');
 	}
-	// ----------------------------------------------------------------
-	// Unregister default widgets
-	// ----------------------------------------------------------------
+	
+	// Default widgets
 	function unregister_default_wp_widgets(){
 		unregister_widget('WP_Widget_Calendar');
 		unregister_widget('WP_Widget_Meta');
@@ -36,6 +35,7 @@
 		unregister_widget('WP_Widget_Tag_Cloud');
 	}
 	add_action('widgets_init', 'unregister_default_wp_widgets', 1);
+	
 	// ----------------------------------------------------------------
 	// Add widget spaces
 	// ----------------------------------------------------------------
@@ -56,6 +56,7 @@
 		));
 	}
 	add_action('widgets_init', 'central_department_widgets');
+	
 	// ----------------------------------------------------------------
 	// Add the capability for editors to edit theme options
 	// ----------------------------------------------------------------
@@ -89,7 +90,9 @@
 	);
 	add_theme_support('custom-background', $background_defaults);
 	
-	
+	// ----------------------------------------------------------------
+	// Add HTML5 shim if needed
+	// ----------------------------------------------------------------
 	function add_ie_html5_shim () {
 		echo '<!--[if lt IE 9]>';
 		echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
@@ -353,8 +356,9 @@
 	?>
     <?php
 		
-		
-	
+	// ----------------------------------------------------------------
+	// tinyMCE adjustments
+	// ----------------------------------------------------------------
 	// Add custom tinyMCE stylesheet
 	function add_editor_styles() {
 		add_editor_style('custom-editor-style.css');
@@ -367,8 +371,7 @@
 		return $buttons;
 	}
 	// Register our callback to the appropriate filter
-	add_filter('mce_buttons', 'cui_mce_buttons');
-	
+	add_filter('mce_buttons', 'cui_mce_buttons');	
 
 	// Callback function to filter the MCE settings
 	function add_tinyMCE_formats( $init_array ) {  
@@ -450,18 +453,20 @@
 			}
 		}
 	}
-
-function add_dashboard_widgets() {
-
-	wp_add_dashboard_widget(
-                 'rss_dashboard_widget',         // Widget slug.
-                 'Latest Template Updates',         // Title.
-                 'rss_dashboard_widget_function' // Display function.
+	
+	// ----------------------------------------------------------------
+	// Add a GitHub dashboard widgets to keep people updated on changes.
+	// ----------------------------------------------------------------
+	function add_dashboard_widgets() {
+		wp_add_dashboard_widget(
+			'rss_dashboard_widget',         // Widget slug.
+			'Latest Template Updates',         // Title.
+			'rss_dashboard_widget_function' // Display function.
         );	
-}
-add_action( 'wp_dashboard_setup', 'add_dashboard_widgets' );
+	}
+	add_action( 'wp_dashboard_setup', 'add_dashboard_widgets' );
 
-function rss_dashboard_widget_function() {
-	include 'features/gitHubFeed.php';
-}
+	function rss_dashboard_widget_function() {
+		include 'features/gitHubFeed.php';
+	}
 ?>
