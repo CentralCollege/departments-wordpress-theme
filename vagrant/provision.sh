@@ -5,7 +5,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install --assume-yes php5 php5-mysql php5-cli php5-curl php-apc \
 	apache2 libapache2-mod-php5 mysql-client mysql-server supervisor \
-	vim ntp bzip2 php-pear
+	vim ntp bzip2 php-pear imagemagick php5-imagick
 
 ## make www-data use /bin/bash for shell
 chsh -s /bin/bash www-data
@@ -32,6 +32,8 @@ ln -s /var/www/wordpress/departments.dev.conf /etc/apache2/sites-enabled/departm
 chgrp www-data /var/log/apache2
 chmod g+w /var/log/apache2
 chown www-data.www-data /var/www/wordpress
+## Set excessively liberal permissions on WordPress.
+chmod -R 777 /var/www/wordpress
 
 ## Enable Apache's mod-rewrite, if it's not already
 a2enmod rewrite
@@ -89,7 +91,7 @@ require_once(ABSPATH . 'wp-settings.php');
 /var/www/wordpress/wp-cli core install \
 	--url='http://192.168.56.111' \
 	--path=/var/www/wordpress \
-	--title='Central College Departments' \
+	--title='Departments' \
 	--admin_user=admin \
 	--admin_password=admin \
 	--admin_email=oyenj@central.edu \
@@ -105,6 +107,10 @@ require_once(ABSPATH . 'wp-settings.php');
 	--allow-root
 
 /var/www/wordpress/wp-cli option update blogdescription 'A test site for departments.' \
+	--path=/var/www/wordpress \
+	--allow-root
+
+/var/www/wordpress/wp-cli rewrite structure '/%year%/%monthnum%/%postname%/' \
 	--path=/var/www/wordpress \
 	--allow-root
 	
