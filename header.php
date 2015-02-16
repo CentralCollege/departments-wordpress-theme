@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
     	<?php wp_head(); ?>
     </head>
-    <body> 
+    <body <?php body_class($class); ?>> 
 		<?php if (!is_front_page() && get_option('active_banner_photo') == 'no') { 
 			
 		?> 

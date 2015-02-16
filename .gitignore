@@ -42,3 +42,5 @@ node_modules
 gruntfile.js
 package.json
 secret.json
+vagrant/.vagrant
+wp-import-data.xml
