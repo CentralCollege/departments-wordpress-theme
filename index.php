@@ -18,9 +18,17 @@
 
 	<?php 
     //Loop ends here
-    endwhile; else: ?>
+    endwhile; ?>
+	
+    <div class="pagination">
+		<?php next_posts_link('&laquo; Older posts '); ?>
+	    <?php previous_posts_link( 'Newer posts &raquo;' ); ?>
+    </div>
+	<?php else: ?>
     <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
     <?php endif; ?>
+    
+    
     </div>
     
     <?php get_sidebar(); ?>
