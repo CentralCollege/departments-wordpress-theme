@@ -479,6 +479,27 @@ a.read-more {
 	display: block;
 	margin-bottom: 3em;
 }
+/* Pagination */
+/*---------------------------------------------------*/
+.pagination{
+	margin: 3em 1em 1em 1em;
+	text-align: center;
+}
+.pagination a:link, .pagination a:visited{
+	  border: 1px solid #990000;
+	  background-color: #cb2026;
+	  color: #fff;
+	  padding: .5em;
+	  margin: 1em;
+	  border-radius: .5em;
+	  cursor: pointer;
+	  text-transform: uppercase;
+	  text-decoration: none;
+}
+.pagination a:hover{
+	background-color: #990000;
+}
+
 /* Footer */
 /*---------------------------------------------------*/
 
@@ -666,5 +687,11 @@ Top-menu nav
 }
 #cui_menu ul li ul li{
 	display: none;
-}	
+}
+/* Pagination */
+.pagination a:link, .pagination a:visited{
+	display: block;
+	margin: 1em 0;
+	width: 95%;
+}
 }

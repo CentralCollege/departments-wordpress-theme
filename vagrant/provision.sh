@@ -31,9 +31,6 @@ ln -s /var/www/wordpress/departments.dev.conf /etc/apache2/sites-enabled/departm
 ## Tweak permissions for www-data user
 chgrp www-data /var/log/apache2
 chmod g+w /var/log/apache2
-chown www-data.www-data /var/www/wordpress
-## Set excessively liberal permissions on WordPress.
-chmod -R 777 /var/www/wordpress
 
 ## Enable Apache's mod-rewrite, if it's not already
 a2enmod rewrite
@@ -145,6 +142,6 @@ fi
 	--post_status=publish \
 	--allow-root
 	
-
-
- 
+## Set excessively liberal permissions on all of WordPress since we are testing.
+chmod -R 777 /var/www/wordpress
+chown www-data.www-data /var/www/wordpress -R
