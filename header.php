@@ -3,11 +3,6 @@
 	<head>
     	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
     	<title><?php wp_title( '-', true, 'right' ); ?> <?php bloginfo('name'); ?></title>
-        <link rel="shortcut icon" href="//www.central.edu/favicon.ico?v=2.0" />
-        <link rel="apple-touch-icon-precomposed" href="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo-57.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo-72.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo-114.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo-144.png">
         <link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
     	<?php wp_head(); ?>
