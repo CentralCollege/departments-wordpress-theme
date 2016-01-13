@@ -1,3 +1,5 @@
+<title>Central College - Page not found</title>
+
 <?php get_header(); ?>
 
 <div class="posts">
