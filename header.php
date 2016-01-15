@@ -8,7 +8,7 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo-72.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo-114.png">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//d1lqhpmxg10s5j.cloudfront.net/images/main/centralCollegeLogo-144.png">
-        <link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
     	<?php wp_head(); ?>
     </head>
