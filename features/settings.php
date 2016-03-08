@@ -1,4 +1,4 @@
-<h1>Manage the site settings</h1>
+<h1>Manage site settings</h1>
 <hr size="1">
 <?php
 	//verify nonce
@@ -141,6 +141,7 @@
         </tbody>
     </table>
 </form>
+<hr size="1">
 <div class="wrapper">
 <form name="form2" method="post" action="">
 <?php wp_nonce_field( 'updateSettings'); ?>
@@ -192,9 +193,10 @@
         </tbody>
     </table>
 </form>
+<hr size="1">
 <form name="form3" method="post" action="">
 <?php wp_nonce_field( 'updateSettings'); ?>
-<h2>Directory Settings</h2>
+<h2>Faculty/Staff Directory Settings</h2>
     <table class="form-table">
         <tbody>
           <?php if (current_user_can('edit_themes') ) { ?>
@@ -204,7 +206,7 @@
                 </th>
                 <td>
                         <input type="text" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" size="80" ><br />
-                        <span class="description">http://www.central.edu/api/people/</span>
+                        <span class="description">The directory url can be populated from people API: http://www.central.edu/api/people/. An API key is required.</span>
                 </td>
             </tr>
             <tr>
