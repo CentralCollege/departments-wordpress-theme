@@ -1,8 +1,8 @@
-<h1>Manage the homepage</h1>
+<h1>Manage the site settings</h1>
 <hr size="1">
 <?php
 	//verify nonce
-	if(!empty( $_POST ) && check_admin_referer('updateHomepage', '_wpnonce')){
+	if(!empty( $_POST ) && check_admin_referer('updateSettings', '_wpnonce')){
 		//social media
 		if (isset($_POST['central_twitter_URL']) && strlen($_POST['central_twitter_URL']) > 0){
 			update_option('central_twitter_URL', $_POST['central_twitter_URL']);
@@ -19,6 +19,8 @@
 		} else {
 			update_option('central_youtube_URL','http://www.youtube.com/user/centralcollegeadm');
 		}
+	}
+	if(!empty( $_POST ) && check_admin_referer('updateSettings', '_wpnonce')){
 		//theme settings
 		if (isset($_POST['active_banner_photo']) ) {
 			update_option('active_banner_photo', $_POST['active_banner_photo']);
@@ -29,7 +31,9 @@
 		if (isset($_POST['active_breadcrumb']) ) {
 			update_option('active_breadcrumb', $_POST['active_breadcrumb']);
 		}
-		if (isset($_POST['directory_url']) ) {
+	}
+	if(!empty( $_POST ) && check_admin_referer('updateSettings', '_wpnonce')){
+		if (isset($_POST['directory_url']) && strlen($_POST['directory_url']) > 0) {
 			update_option('directory_url', $_POST['directory_url']);
 				if(get_page_by_path('department-directory') == NULL){
 					?><div class="updated">
@@ -92,11 +96,13 @@
 						);
 						wp_update_post($update_directory_page);
 				}
+		} else {
+			update_option('directory_url','http://www.central.edu/api/people/');
 		}
 	}
 ?>
 <form name="form1" method="post" action="">
-<?php wp_nonce_field( 'updateHomepage'); ?>
+<?php wp_nonce_field( 'updateSettings'); ?>
 <h2>Social Media Settings</h2>
 <p>Enter the URL to the following social media sites if applicable.</p>
     <table class="form-table">
@@ -137,7 +143,7 @@
 </form>
 <div class="wrapper">
 <form name="form2" method="post" action="">
-<?php wp_nonce_field( 'updateHomepage'); ?>
+<?php wp_nonce_field( 'updateSettings'); ?>
 <h2>Theme Settings</h2>
     <table class="form-table">
         <tbody>
@@ -187,7 +193,7 @@
     </table>
 </form>
 <form name="form3" method="post" action="">
-<?php wp_nonce_field( 'updateHomepage'); ?>
+<?php wp_nonce_field( 'updateSettings'); ?>
 <h2>Directory Settings</h2>
     <table class="form-table">
         <tbody>
@@ -197,7 +203,8 @@
                     <label for="directory_url">Directory listing url: </label>
                 </th>
                 <td>
-                        <input type="text" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" size="80" >
+                        <input type="text" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" size="80" ><br />
+                        <span class="description">http://www.central.edu/api/people/</span>
                 </td>
             </tr>
             <tr>

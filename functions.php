@@ -118,7 +118,7 @@
 	// Add menu for managing homepage items
 	// ----------------------------------------------------------------
 	function site_settings_items_menu(){
-		add_menu_page('Site Settings', 'Site Settings', 'edit_pages', 'site_settings_items_menu', 'site_settings_items_edit', 'dashicons-admin-home', 4);
+		add_menu_page('Site Settings', 'Site Settings', 'edit_pages', 'site_settings_items_menu', 'site_settings_items_edit', 'dashicons-admin-home', 81);
 	}
 	add_action('admin_menu', 'site_settings_items_menu');
 	//HTML for this page is done through an include.
