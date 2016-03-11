@@ -154,6 +154,20 @@ fi
 	--post_status=publish \
 	--allow-root
 
+# Add/Remove plugins then update everything that is installed.
+/var/www/wordpress/wp-cli plugin uninstall hello \
+	--path=/var/www/wordpress \
+	--allow-root
+
+/var/www/wordpress/wp-cli plugin install "WordPress Beta Tester" \
+	--path=/var/www/wordpress \
+	--allow-root
+
+/var/www/wordpress/wp-cli plugin update \
+	--path=/var/www/wordpress \
+	--allow-root \
+	--all
+
 ## Set excessively liberal permissions on all of WordPress since we are testing.
 chmod -R 777 /var/www/wordpress
 chown www-data.www-data /var/www/wordpress -R
