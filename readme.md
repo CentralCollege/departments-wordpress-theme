@@ -27,6 +27,9 @@ Vagrant requires:
 * Vagrant to be installed - http://docs.vagrantup.com/v2/installation/
 * VirtualBox to be installed - https://www.virtualbox.org/wiki/Downloads
 
+WordPress beta testing
+------------------
+To enable testing with beta versions or release candidates of WordPress, the WordPress beta tester plugin is installed in the Vagrant test box. 
 
 Grunt Integration
 ------------------
