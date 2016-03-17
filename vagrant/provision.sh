@@ -139,8 +139,21 @@ then
 		--authors=skip \
 		--path=/var/www/wordpress \
 		--allow-root
+# Import generic testing data.
 else
-	echo "Did not import data"
+	curl -OL https://raw.githubusercontent.com/manovotny/wptest/master/wptest.xml
+	mv /home/vagrant/wptest.xml /var/www/wordpress/wp-content/themes/departments-wordpress-theme/wp-import-data.xml
+
+	/var/www/wordpress/wp-cli plugin install wordpress-importer --activate \
+		--path=/var/www/wordpress \
+		--allow-root
+
+	/var/www/wordpress/wp-cli import '/var/www/wordpress/wp-content/themes/departments-wordpress-theme/wp-import-data.xml' \
+		--authors=skip \
+		--path=/var/www/wordpress \
+		--allow-root
+
+	echo "Imported generic test data."
 fi
 
 /var/www/wordpress/wp-cli post delete 1 --force \
