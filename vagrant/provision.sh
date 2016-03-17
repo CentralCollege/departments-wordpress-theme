@@ -141,10 +141,9 @@ then
 		--allow-root
 # Import generic testing data.
 else
-	curl -OL https://raw.githubusercontent.com/manovotny/wptest/master/wptest.xml
-	#Optionally, use WordPress official theme unit test data
-	# curl -OL https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
-	mv /home/vagrant/wptest.xml /var/www/wordpress/wp-content/themes/departments-wordpress-theme/wp-import-data.xml
+	# Use WordPress official theme unit test data to populate WP with content for testing
+	curl -OL https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
+	mv /home/vagrant/theme-unit-test-data.xml /var/www/wordpress/wp-content/themes/departments-wordpress-theme/wp-import-data.xml
 
 	/var/www/wordpress/wp-cli plugin install wordpress-importer --activate \
 		--path=/var/www/wordpress \
