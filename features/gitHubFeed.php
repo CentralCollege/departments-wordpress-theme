@@ -36,3 +36,5 @@ endif;
         <?php endforeach; ?>
     <?php endif; ?>
 </ul>
+<hr size="1">
+<p>Having problems? <a href="https://github.com/CentralCollege/departments-wordpress-theme/issues" target="_blank">Check the list of open issues</a>.</p>
