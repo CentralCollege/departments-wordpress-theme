@@ -182,6 +182,10 @@ fi
 	--allow-root \
 	--all
 
+/var/www/wordpress/wp-cli plugin install https://github.com/CentralCollege/itservices-wordpress-plugin/archive/master.zip \
+	--path=/var/www/wordpress \
+	--allow-root
+
 ## Set excessively liberal permissions on all of WordPress since we are testing.
 chmod -R 777 /var/www/wordpress
 chown www-data.www-data /var/www/wordpress -R
