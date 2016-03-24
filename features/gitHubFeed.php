@@ -38,3 +38,12 @@ endif;
 </ul>
 <hr size="1">
 <p>Having problems? <a href="https://github.com/CentralCollege/departments-wordpress-theme/issues" target="_blank">Check the list of open issues</a>.</p>
+<hr size="1">
+<?php
+  $data = wp_remote_get('https://api.github.com/repos/centralcollege/departments-wordpress-theme/releases');
+  $updates = json_decode($data['body'], true);
+  include 'parsedown.php';
+  $Parsedown = new Parsedown();
+  echo '<h2>Theme updates for '. $updates[0]['name'] . '</h2>';
+  echo '<p>' . $Parsedown->text($updates[0]['body']) . '</p>';
+  ?>
