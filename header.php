@@ -12,7 +12,7 @@
     	<?php wp_head(); ?>
     </head>
     <body <?php body_class($class); ?>>
-		<?php if (!is_front_page() && get_option('active_banner_photo') == 'no') {?>
+		<?php if (get_option('active_banner_photo') == 'no') {?>
         	<div class="logoLink">
              <a href="<?php echo home_url(); ?>">
                 <div class="logoGroupNoImage">
