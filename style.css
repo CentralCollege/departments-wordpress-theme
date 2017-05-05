@@ -475,6 +475,15 @@ a.read-more {
 	margin-left: auto !important;
 	margin-right: auto !important;
 }
+.alignnone {
+	display: block;
+	width: 100% !important;
+	height: 100%;
+}
+.alignnone img {
+	width: 100%;
+	height: 100%;
+}
 .contentblock {
 	display: block;
 	margin-bottom: 3em;
@@ -622,7 +631,19 @@ cite.fn {
 span.says {
 	font-size: 1.25em;
 }
-
+.redButton {
+    color: #fff!important;
+    background-color: #900;
+    border: 1px solid #900;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none
+}
+.redButton:hover {
+    background-color: #cb2026;
+    color: #fff !important;
+    text-decoration: none!important
+}
 /*---------------------------------------------------*/
 /* Responsive */
 /*---------------------------------------------------*/

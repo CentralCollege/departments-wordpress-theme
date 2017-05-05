@@ -139,8 +139,22 @@ then
 		--authors=skip \
 		--path=/var/www/wordpress \
 		--allow-root
+# Import generic testing data.
 else
-	echo "Did not import data"
+	# Use WordPress official theme unit test data to populate WP with content for testing
+	curl -OL https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
+	mv /home/vagrant/theme-unit-test-data.xml /var/www/wordpress/wp-content/themes/departments-wordpress-theme/wp-import-data.xml
+
+	/var/www/wordpress/wp-cli plugin install wordpress-importer --activate \
+		--path=/var/www/wordpress \
+		--allow-root
+
+	/var/www/wordpress/wp-cli import '/var/www/wordpress/wp-content/themes/departments-wordpress-theme/wp-import-data.xml' \
+		--authors=skip \
+		--path=/var/www/wordpress \
+		--allow-root
+
+	echo "Imported generic test data."
 fi
 
 /var/www/wordpress/wp-cli post delete 1 --force \
@@ -167,6 +181,10 @@ fi
 	--path=/var/www/wordpress \
 	--allow-root \
 	--all
+
+/var/www/wordpress/wp-cli plugin install https://github.com/CentralCollege/itservices-wordpress-plugin/archive/master.zip \
+	--path=/var/www/wordpress \
+	--allow-root
 
 ## Set excessively liberal permissions on all of WordPress since we are testing.
 chmod -R 777 /var/www/wordpress
