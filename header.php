@@ -28,8 +28,7 @@
 				    _cbe("create","e1c184ce");
 				    _cbe("log","pageview");
 				</script>
-				<!-- end CBE code —>
-
+				<!-- end CBE code -->
 				<?php } ?>
     	<?php wp_head(); ?>
     </head>
