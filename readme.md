@@ -5,7 +5,7 @@ A WordPress theme for Central College departments to use as a department website
 
 Sites
 ------------------
-* This theme is available for departments at http://departments.central.edu. Contact Jacob Oyen to upgrade your site.
+* This theme is available for departments at http://departments.central.edu. Contact Jordan Bohr to upgrade your site.
 
 Deployment
 ------------------
