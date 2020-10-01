@@ -94,13 +94,13 @@
 	// Add theme support for custom title tags
 	// ----------------------------------------------------------------
 	add_theme_support('title-tag');
-	
+
 	// ----------------------------------------------------------------
 	// Add HTML5 shim if needed
 	// ----------------------------------------------------------------
 	function add_ie_html5_shim () {
 		echo '<!--[if lt IE 9]>';
-		echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
+		echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>';
 		echo '<![endif]-->';
 	}
 	add_action('wp_head', 'add_ie_html5_shim');

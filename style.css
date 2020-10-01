@@ -1,8 +1,8 @@
 /*
 Theme Name: Central College Departments 2.0
-Theme URI: http://github.com/centralcollege
+Theme URI: https://github.com/centralcollege
 Author: Gavin MacDonald '16
-Author URI: http://www.central.edu
+Author URI: https://www.central.edu
 Description: A new and improved version of the theme for use on departments.central.edu.
 Version: 0.1 beta
 
@@ -91,8 +91,8 @@ em {
 	background-image:url("//img.centralcollege.info/icons/information.png");
 	background-repeat:no-repeat;
      background-position: 5px 5px;
-	border: 1px solid #006699; 
-	background-color:#def4fe; 
+	border: 1px solid #006699;
+	background-color:#def4fe;
 	padding: 5px 5px 5px 25px;
 	margin: 5px;
 }
@@ -100,8 +100,8 @@ em {
 	background-image:url("//img.centralcollege.info/icons/accept.png");
 	background-repeat:no-repeat;
      background-position: 5px 5px;
-	border: 1px solid #669900; 
-	background-color: #dff2bf; 
+	border: 1px solid #669900;
+	background-color: #dff2bf;
 	padding: 5px 5px 5px 25px;
 	margin: 5px;
 }
@@ -109,18 +109,18 @@ em {
 	background-image:url("//img.centralcollege.info/icons/error.png");
 	background-repeat:no-repeat;
      background-position: 5px 5px;
-	border: 1px solid #FFCC00; 
-	background-color: #FFFFCC; 
-	padding: 5px 5px 5px 25px; 
+	border: 1px solid #FFCC00;
+	background-color: #FFFFCC;
+	padding: 5px 5px 5px 25px;
 	margin: 5px;
 }
 .errorBox{
 	background-image:url("//img.centralcollege.info/icons/exclamation.png");
 	background-repeat:no-repeat;
      background-position: 5px 5px;
-	border: 1px solid #CC0000; 
-	background-color: #FFCCCC; 
-	padding: 5px 5px 5px 25px; 
+	border: 1px solid #CC0000;
+	background-color: #FFCCCC;
+	padding: 5px 5px 5px 25px;
 	margin: 5px;
 }
 /*---------------------------------------------------*/
@@ -146,7 +146,7 @@ td{
 /* BaseTable styles */
 table.tableBase{
 	width: 80%;
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 .centerTable{
 	margin: 0 auto;
@@ -182,7 +182,7 @@ table.tableBase{
 /* Table with hover effect */
 table.tableHover{
 	width: 80%;
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 .tableHover th{
 	font-weight:bold;
@@ -576,7 +576,7 @@ a.read-more {
 /*---------------------------------------------------*/
 #footer-widgets{
 	border-top: 1px dotted #ccc;
-	border-bottom: 1px dotted #ccc;	
+	border-bottom: 1px dotted #ccc;
 	background-color: #efefef;
 	margin: 0 auto;
 }
@@ -696,7 +696,7 @@ Top-menu nav
 */
 #cui_menu ul li {
 	float: none;
-	display: block;	
+	display: block;
 	color: #fff;
 	border-bottom: 1px solid #fff;
 }

@@ -9,7 +9,7 @@
         <p>
             <ul>
                 <li><a href="/human-resources/directory/">Find someone in the directory to contact</a></li>
-                <li><a href="http://search.central.edu">Search our site</a></li>
+                <li><a href="https://www.central.edu/search/">Search our site</a></li>
                 <li>Start over at the <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?> homepage</a></li>
             </ul>
         </p>
