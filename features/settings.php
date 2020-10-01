@@ -7,17 +7,17 @@
 		if (isset($_POST['central_twitter_URL']) && strlen($_POST['central_twitter_URL']) > 0){
 			update_option('central_twitter_URL', $_POST['central_twitter_URL']);
 		} else {
-			update_option('central_twitter_URL','http://twitter.com/centralcollege');
+			update_option('central_twitter_URL','https://twitter.com/centralcollege');
 		}
 		if (isset($_POST['central_facebook_URL']) && strlen($_POST['central_facebook_URL']) > 0){
 			update_option('central_facebook_URL', $_POST['central_facebook_URL']);
 		} else {
-			update_option('central_facebook_URL','http://facebook.com/centralcollege');
+			update_option('central_facebook_URL','https://facebook.com/centralcollege');
 		}
 		if (isset($_POST['central_youtube_URL']) && strlen($_POST['central_youtube_URL']) > 0){
 			update_option('central_youtube_URL', $_POST['central_youtube_URL']);
 		} else {
-			update_option('central_youtube_URL','http://www.youtube.com/user/centralcollegeadm');
+			update_option('central_youtube_URL','https://www.youtube.com/user/centralcollegeadm');
 		}
 	}
 	if(!empty( $_POST ) && check_admin_referer('updateSettings', '_wpnonce')){
@@ -97,7 +97,7 @@
 						wp_update_post($update_directory_page);
 				}
 		} else {
-			update_option('directory_url','http://www.central.edu/api/people/');
+			update_option('directory_url','https://api.central.edu/people/');
 		}
 	}
 ?>
@@ -206,7 +206,7 @@
                 </th>
                 <td>
                         <input type="text" name="directory_url" id="directory_url" value="<?php echo get_option('directory_url')?>" size="80" ><br />
-                        <span class="description">The directory url can be populated from people API: http://www.central.edu/api/people/. An API key is required.</span>
+                        <span class="description">The directory url can be populated from people API: https://api.central.edu/people/. An API key is required.</span>
                 </td>
             </tr>
             <tr>
