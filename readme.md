@@ -5,7 +5,7 @@ A WordPress theme for Central College departments to use as a department website
 
 Sites
 ------------------
-* This theme is available for departments at http://departments.central.edu. Contact Jordan Bohr to upgrade your site.
+* This theme is available for department sites managed at https://departments.central.edu. Contact [Jordan Bohr](mailto:bohrj@central.edu) to upgrade or make changes to your site.
 
 Deployment
 ------------------
@@ -24,16 +24,16 @@ To easily spin up a development server to work on this theme, we've included Vag
 3. Run `vagrant up` to initate a test server.
 
 Vagrant requires:
-* Vagrant to be installed - http://docs.vagrantup.com/v2/installation/
+* Vagrant to be installed - https://www.vagrantup.com/docs/installation
 * VirtualBox to be installed - https://www.virtualbox.org/wiki/Downloads
 
 WordPress beta testing
 ------------------
-To enable testing with beta versions or release candidates of WordPress, the WordPress beta tester plugin is installed in the Vagrant test box. 
+To enable testing with beta versions or release candidates of WordPress, the WordPress beta tester plugin is installed in the Vagrant test box.
 
 Grunt Integration
 ------------------
-You can use the Grunt javascript task runner (http://gruntjs.com/) with this project. It currently performs the following commands:
+You can use the Grunt javascript task runner (https://gruntjs.com/) with this project. It currently performs the following commands:
 
 * Watches all `.php` files and uses SSH to transfer to a remote server.
 * Watches all `.css` files and minifies them.
@@ -41,6 +41,6 @@ You can use the Grunt javascript task runner (http://gruntjs.com/) with this pro
 Grunt Configuration
 ------------------
 
-1. Install the Grunt CLI if you haven't already:  http://gruntjs.com/getting-started
+1. Install the Grunt CLI if you haven't already:  https://gruntjs.com/getting-started
 2. Run `npm install` to install the project dependencies
 3. Run Grunt with the `grunt` command.
