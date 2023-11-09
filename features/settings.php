@@ -47,7 +47,7 @@
 					foreach($xml->employee as $emp){
 						$directoryOutput = $directoryOutput . "<div class='staffListing' style='border-bottom: 1px solid #ccc; min-height: 200px;'>";
 						if ($emp->hasPhoto == "yes"){
-							$directoryOutput = $directoryOutput . "<img src='https://img.centralcollege.info/headshots/" . $emp->username . ".jpg' alt='" . $emp->firstName . " " . $emp->lastName. "' style='float:right; padding: 1px; margin: 1px; border: 1px solid #ccc;'/>";
+							$directoryOutput = $directoryOutput . "<img src='https://img.central.edu/headshots/" . $emp->username . ".jpg' alt='" . $emp->firstName . " " . $emp->lastName. "' style='float:right; padding: 1px; margin: 1px; border: 1px solid #ccc;'/>";
 						}
 						$directoryOutput = $directoryOutput . "<h4>" . $emp->firstName . " " . $emp->lastName. "</h4>";
 						$directoryOutput = $directoryOutput . "<p>" . $emp->title . "<br />";
@@ -80,7 +80,7 @@
 						foreach($xml->employee as $emp){
 							$directoryOutput = $directoryOutput . "<div class='staffListing' style='border-bottom: 1px solid #ccc; min-height: 200px;'>";
 							if ($emp->hasPhoto == "yes"){
-								$directoryOutput = $directoryOutput . "<img src='https://img.centralcollege.info/headshots/" . $emp->username . ".jpg' alt='" . $emp->firstName . " " . $emp->lastName. "' style='float:right; padding: 1px; margin: 1px; border: 1px solid #ccc;'/>";
+								$directoryOutput = $directoryOutput . "<img src='https://img.central.edu/headshots/" . $emp->username . ".jpg' alt='" . $emp->firstName . " " . $emp->lastName. "' style='float:right; padding: 1px; margin: 1px; border: 1px solid #ccc;'/>";
 							}
 							$directoryOutput = $directoryOutput . "<h4>" . $emp->firstName . " " . $emp->lastName. "</h4>";
 							$directoryOutput = $directoryOutput . "<p>" . $emp->title . "<br />";
