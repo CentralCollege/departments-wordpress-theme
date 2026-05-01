@@ -221,7 +221,7 @@ table.tableHover{
 	float: left;
 	/* border: 2px solid #cb2026; */
 	/* border-left: none; */
-	/* border-top: none; */
+	border-top: none;
 	border-right: none;
 }
 #cui_menu ul li:last-child {
@@ -262,14 +262,16 @@ table.tableHover{
 	border-right: none;
 }
 #cui_menu ul li ul li{
-	font-size: .65em;
+	font-size: 0.75em;
+	/* border-top: 2px solid #cb2026; */
+	/* border-bottom: 0; */
 }
 #cui_menu ul li ul li a {
 	color: #000;
 }
 
 #cui_menu .sub-menu li {
-    border-right: 2px solid #cb2026;
+    /* border-right: 2px solid #cb2026; */
 }
 .menu-item.current-menu-item a {
     /* background-color: #cb2026 !important;
@@ -725,7 +727,7 @@ Top-menu nav
 	display: block;
 	color: #fff;
 	border-bottom: 2px solid #cb2026;
-	border-right: none;
+	border-left: none;
 }
 #cui_menu ul li a {
 	background: none;
