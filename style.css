@@ -36,8 +36,11 @@ body {
 line-height: 1;
 }
 body.custom-background {
-	background: #fff; 
-	background-image: none !important;
+	background-image: url(https://departments.central.edu/registrar/wp-content/themes/departments-wordpress-theme/images/graystripes2.png);
+    background-position: left top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: scroll;
 }
 ol, ul {
 list-style: none;
