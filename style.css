@@ -35,6 +35,10 @@ display: block;
 body {
 line-height: 1;
 }
+body.custom-background {
+	background: #fff; 
+	background-image: none !important;
+}
 ol, ul {
 list-style: none;
 }
@@ -72,7 +76,7 @@ html{
 h2 {
 	font-size: 1.5em;
 	font-family: 'ZurichBT-RomanCondensed',arial,serif;
-	color: #990000;
+	color: #333;
 }
 p {
 	line-height: 1.25em;
@@ -131,7 +135,7 @@ em {
 	margin: 0 auto;
 	width: 90%;
 	background-color: #fff;
-	box-shadow: 0 0 10px #000000;
+	/* box-shadow: 0 0 10px #000000; */
 }
 
 /* ------------------ Global Classes for styling elements  -------------------- */
@@ -212,10 +216,13 @@ table.tableHover{
 	display: block;
 	position: relative;
 	float: left;
-	border-right: 1px solid #cb2026;
+	/* border: 2px solid #cb2026; */
+	/* border-left: none; */
+	/* border-top: none; */
+	border-right: none;
 }
 #cui_menu ul li:last-child {
-	border-right: none;
+	/* border-right: 2px solid #cb2026; */
 }
 #cui_menu li ul {
 	display: none;
@@ -223,24 +230,26 @@ table.tableHover{
 #cui_menu ul li a {
 	display: block;
 	text-decoration: none;
-	color: #fff;
-	padding: 5px 15px 5px 15px;
-	background: #990000;
+	color: #333;
+	padding: 15px;
+	background: #fff;
 	white-space: nowrap;
 	font-size: 1em;
 }
 #cui_menu ul li a:hover {
 	background: #cb2026;
+	color: #fff;
 }
 #cui_menu li:hover ul {
 	display: block;
 	position: absolute;
+	z-index: 1;
 }
 #cui_menu li:hover li {
 	float: none;
 }
 #cui_menu li:hover a {
-	background: #ccc;
+	background: #efefef;
 }
 #cui_menu li:hover li a:hover {
 	color: #FFF;
@@ -254,6 +263,16 @@ table.tableHover{
 }
 #cui_menu ul li ul li a {
 	color: #000;
+}
+
+#cui_menu .sub-menu li {
+    border-right: 2px solid #cb2026;
+}
+.menu-item.current-menu-item a {
+    /* background-color: #cb2026 !important;
+    color: #fff !important; */
+    /* border-bottom: 2px solid #900; */
+    /* background-color: #efefef !important; */
 }
 
 /*---------------------------------------------------*/
@@ -329,7 +348,7 @@ table.tableHover{
 	color: #fff;
 	padding: .5em;
 	margin: 1em auto;
-	border-radius: .5em;
+	/* border-radius: .5em; */
 	cursor:pointer;
 	text-transform: uppercase;
 }
@@ -341,7 +360,9 @@ table.tableHover{
 /*---------------------------------------------------*/
 #header{
 	display:block;
-	background-color: #990000;
+	/* background-color: #990000; */
+	margin-bottom: 1%;
+	/* position: relative; */
 }
 .coverImage img{
 	width: 100%;
@@ -369,20 +390,20 @@ table.tableHover{
 	padding-bottom: 1em;
 }
 .logoGroupNoImage{
-	background-color: #ffffff;
-	margin: 0 auto;
-	position: relative;
+	background-color: #cb2026;
+	/* margin: 0 auto; */
+	/* position: relative; */
 	text-align: center;
-	width: 90%;
+	/* width: 90%; */
 	margin-bottom: 2%;
-	box-shadow: 0 0 10px #000000;
-	border-radius: 0px 0px 20px 20px;
+	/* box-shadow: 0 0 10px #000000; */
+	/* border-radius: 0px 0px 20px 20px; */
 }
 .logoGroupNoImage h1 {
 	font-size: 1.3em;
 	font-family: 'ZurichBT-RomanCondensed',arial,serif;
 	letter-spacing: 1px;
-	color: #707173;
+	color: #fff;
 	text-transform: uppercase;
 	padding-bottom: 1em;
 }
@@ -514,7 +535,7 @@ a.read-more {
 
 .footer {
 	padding: 2%;
-	background-color: #efefef;
+	/* background-color: #efefef; */
 	text-align: center;
 	margin: 0 auto;
 }
@@ -575,10 +596,11 @@ a.read-more {
 /* Footer Widgets*/
 /*---------------------------------------------------*/
 #footer-widgets{
-	border-top: 1px dotted #ccc;
-	border-bottom: 1px dotted #ccc;
+	border-top: 2px solid#ccc;
+	/* border-bottom: 1px dotted #ccc; */
 	background-color: #efefef;
 	margin: 0 auto;
+	margin-top: 2%;
 }
 #footer-widgets .widget{
 	width: 30%;
@@ -665,13 +687,14 @@ span.says {
 	text-align: center;
 }
 .posts {
-	width: 100%;
+	width: unset;
+	padding: 0px 10px;
 }
 .post-content img {
 	height: 50%;
 }
 #wrapper {
-	box-shadow: 0px 20px 10px;
+	/* box-shadow: 0px 20px 10px; */
 	width: 100%;
 }
 .wp-caption-text {
@@ -698,13 +721,15 @@ Top-menu nav
 	float: none;
 	display: block;
 	color: #fff;
-	border-bottom: 1px solid #fff;
+	border-bottom: 2px solid #cb2026;
+	border-right: none;
 }
 #cui_menu ul li a {
 	background: none;
-	color: #fff;
-	padding: none;
+	color: #333;
+	padding: 5px;
 	white-space:normal;
+	/* border-right: none; */
 }
 #cui_menu ul li ul li{
 	display: none;
