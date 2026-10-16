@@ -1,6 +1,4 @@
 <?php 
-header("Location: https://central.edu/human-resources/directory/");
-exit;
 get_header(); ?>
 <!-- begin CBE code -->
 <script>
