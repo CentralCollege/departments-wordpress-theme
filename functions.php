@@ -239,4 +239,10 @@
 	function rss_dashboard_widget_function() {
 		include 'features/gitHubFeed.php';
 	}
+
+	/* function bounce_to_hr() {
+		header("Location: https://central.edu/human-resources/directory/");
+		exit;
+	}
+	add_action('redirect_to_directory', 'bounce_to_hr'); */
 ?>
